@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=Cortex-M7" 
+
+"--fpu=None" 
+
+"-p" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CONFIG\debugger\NXP\MKV58F512xxx24.ddf" 
+
+"--semihosting=none" 
+
+"--device=MKV58F512xxx24" 
+
+"--multicore_nr_of_cores=1" 
+
+
+
+

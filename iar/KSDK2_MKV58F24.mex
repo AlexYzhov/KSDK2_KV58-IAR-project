@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="MKV58F1M0xxx24" version="1.2" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.2 http://mcuxpresso.nxp.com/XSD/mex_configuration_1.2.xsd" uuid="09507981-a477-40d8-bfe5-d36636700c5b" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>MKV58F1M0xxx24</processor>
+      <package>MKV58F1M0VLQ24</package>
+      <mcu_data>ksdk2_0</mcu_data>
+      <example></example>
+      <cores>
+         <core name="Cortex-M4F" id="core0" description="M4 core"/>
+      </cores>
+      <description></description>
+   </common>
+   <tools>
+      <pins name="Pins" version="2.0">
+         <pins_profile>
+            <processor_version>2.0.0</processor_version>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitPins">
+               <description>Configures pin routing and optionally pin electrical features.&amp;lt;br/&amp;gt;</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins.BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins/>
+            </function>
+         </functions_list>
+      </pins>
+      <clocks name="Clocks" version="3.0">
+         <clocks_profile>
+            <processor_version>2.0.0</processor_version>
+         </clocks_profile>
+         <clock_configurations>
+            <clock_configuration name="BOARD_BootClockRUN">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="PinSignal" resourceId="OSC0.EXTAL0" description="&apos;EXTAL0&apos; (Pins tool id: OSC0.EXTAL0, Clocks tool id: OSC.EXTAL0) needs to be routed" problem_level="1" source="Clocks: BOARD_BootClockRUN">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks.BOARD_BootClockRUN">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="OSC.OSC.outFreq" value="50 MHz" locked="false" enabled="true"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="Bus_clock.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Core_clock.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="Flash_clock.outFreq" value="25 MHz" locked="false" accuracy=""/>
+                  <clock_output id="FlexBus_clock.outFreq" value="50 MHz" locked="false" accuracy=""/>
+                  <clock_output id="LPO_clock.outFreq" value="1 kHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="100 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="MCGMode" value="PEE" locked="false"/>
+                  <setting id="MCG.IREFS.sel" value="MCG.FRDIV" locked="false"/>
+                  <setting id="MCG.PLLS.sel" value="MCG.PLL_DIV2" locked="false"/>
+                  <setting id="MCG.PRDIV.scale" value="4" locked="false"/>
+                  <setting id="MCG.VDIV.scale" value="32" locked="false"/>
+                  <setting id="MCRFFCLKAllowConfig" value="no" locked="false"/>
+                  <setting id="SIM.OUTDIV1.scale" value="2" locked="false"/>
+                  <setting id="SIM.OUTDIV2.scale" value="2" locked="false"/>
+                  <setting id="SIM.OUTDIV3.scale" value="4" locked="false"/>
+                  <setting id="SIM.OUTDIV4.scale" value="8" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>true</called_from_default_init>
+            </clock_configuration>
+         </clock_configurations>
+      </clocks>
+      <prjgen name="工程生成器" version="1.0">
+         <toolchain id="iar" type="C"/>
+         <project_config name="core0" rtos="middleware.baremetal">
+            <description></description>
+            <options/>
+            <dependencies/>
+            <component_set type="driver" selection="custom">
+               <component>platform.drivers.ewm</component>
+               <component>platform.drivers.pdb</component>
+               <component>platform.drivers.llwu</component>
+               <component>platform.drivers.uart</component>
+               <component>platform.drivers.dspi</component>
+               <component>platform.drivers.ftm</component>
+               <component>platform.drivers.adc16</component>
+               <component>platform.drivers.gpio</component>
+               <component>platform.drivers.i2c</component>
+               <component>platform.drivers.pit</component>
+               <component>platform.drivers.lptmr</component>
+               <component>platform.drivers.trng</component>
+               <component>platform.drivers.dac</component>
+               <component>platform.drivers.pmc</component>
+               <component>platform.drivers.sysmpu</component>
+               <component>platform.drivers.hsadc</component>
+               <component>platform.drivers.flexbus</component>
+               <component>platform.drivers.enet</component>
+               <component>platform.drivers.flash</component>
+               <component>platform.drivers.edma</component>
+               <component>platform.drivers.sim</component>
+               <component>platform.drivers.flexcan</component>
+               <component>platform.drivers.rcm</component>
+               <component>platform.drivers.port</component>
+               <component>platform.drivers.crc</component>
+               <component>platform.drivers.cmp</component>
+               <component>platform.drivers.pwm</component>
+               <component>platform.drivers.dmamux</component>
+               <component>platform.drivers.smc</component>
+               <component>platform.drivers.xbara</component>
+               <component>platform.drivers.xbarb</component>
+               <component>platform.drivers.wdog</component>
+               <component>platform.drivers.common</component>
+               <component>platform.drivers.clock</component>
+            </component_set>
+            <component_set type="utility" selection="all"/>
+            <component_set type="CMSIS_driver" selection="all"/>
+            <component_set type="unsupported" selection="none"/>
+         </project_config>
+      </prjgen>
+      <common name="common" version="1.0">
+         <sdk_package version="2.2.0" configuration="7a68cc5d06aa12206e842d73244250f8"/>
+         <core name="core0" role="primary" project_name="KSDK2_MKV58F24"/>
+      </common>
+   </tools>
+</configuration>

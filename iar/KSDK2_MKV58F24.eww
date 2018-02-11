@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<workspace>
+  <batchBuild>
+    <batchDefinition>
+      <name>all</name>
+      <member>
+        <project>KSDK2_MKV58F24</project>
+        <configuration>Release</configuration>
+      </member>
+      <member>
+        <project>KSDK2_MKV58F24</project>
+        <configuration>Debug</configuration>
+      </member>
+    </batchDefinition>
+    <batchDefinition>
+      <name>Release</name>
+      <member>
+        <project>KSDK2_MKV58F24</project>
+        <configuration>Release</configuration>
+      </member>
+    </batchDefinition>
+    <batchDefinition>
+      <name>Debug</name>
+      <member>
+        <project>KSDK2_MKV58F24</project>
+        <configuration>Debug</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+  <project>
+    <path>$WS_DIR$/KSDK2_MKV58F24.ewp</path>
+  </project>
+</workspace>
