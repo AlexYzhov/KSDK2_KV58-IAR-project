@@ -1,14 +1,14 @@
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armproc.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armproc.dll" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armjlink2.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armjlink2.dll" 
 
-"E:\Proj_KV58\∫Ï¡ÏΩÌKV58 ƒ£∞Â\KSDK2_MKV58F24\iar\MKV58F1M0xxx24_flash.icf" 
+"D:\Proj_Kinetis\iar\Debug\Exe\KSDK2_MKV58F24.out" 
 
---plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
 
---device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\config\debugger\NXP\KV5x.dmac" 
+--device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\config\debugger\NXP\KV5x.dmac" 
 
---flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\config\flashloader\NXP\FlashKV5xF1M0.board" 
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\config\flashloader\NXP\FlashKV5xF1M0.board" 
 
 
 

@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<settings>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <PlDriver>
+        <MemConfigValue>C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CONFIG\debugger\NXP\MKV58F1M0xxx24.ddf</MemConfigValue>
+    </PlDriver>
+    <Jet>
+        <DisableInterrupts>0</DisableInterrupts>
+        <LeaveRunning>0</LeaveRunning>
+        <MultiCoreRunAll>0</MultiCoreRunAll>
+    </Jet>
+    <ArmDriver>
+        <EnableCache>1</EnableCache>
+    </ArmDriver>
+    <DebugChecksum>
+        <Checksum>820195287</Checksum>
+    </DebugChecksum>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <CodeCoverage>
+        <Enabled>_ 0</Enabled>
+    </CodeCoverage>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+        <InstrCount>0</InstrCount>
+    </Disassembly>
+    <JLinkDriver>
+        <ETM_Cookie>ID100_107000000000000000001</ETM_Cookie>
+        <ETM_Reg_GeneralControl>0x00022C08</ETM_Reg_GeneralControl>
+        <ETM_Reg_TriggerEvent>0x0000406F</ETM_Reg_TriggerEvent>
+        <ETM_Reg_MemoryMapDecodeControl>0x00000000</ETM_Reg_MemoryMapDecodeControl>
+        <ETM_Reg_TraceStartStopControl>0x00000000</ETM_Reg_TraceStartStopControl>
+        <ETM_Reg_TraceEnableControl2>0x00000000</ETM_Reg_TraceEnableControl2>
+        <ETM_Reg_TraceEnableEvent>0x0000006F</ETM_Reg_TraceEnableEvent>
+        <ETM_Reg_TraceEnableControl1>0x01000000</ETM_Reg_TraceEnableControl1>
+        <ETM_Reg_FIFOFullRegion>0x01000000</ETM_Reg_FIFOFullRegion>
+        <ETM_Reg_FIFOFullLevel>0x00000008</ETM_Reg_FIFOFullLevel>
+        <ETM_Reg_ViewDataEvent>0x0000406F</ETM_Reg_ViewDataEvent>
+        <ETM_Reg_ViewDataControl1>0x00000000</ETM_Reg_ViewDataControl1>
+        <ETM_Reg_ViewDataControl2>0x00000000</ETM_Reg_ViewDataControl2>
+        <ETM_Reg_ViewDataControl3>0x00000000</ETM_Reg_ViewDataControl3>
+        <ETM_Reg_AddressComparator1>0x00000000</ETM_Reg_AddressComparator1>
+        <ETM_Reg_AddressComparator2>0x00000000</ETM_Reg_AddressComparator2>
+        <ETM_Reg_AddressComparator3>0x00000000</ETM_Reg_AddressComparator3>
+        <ETM_Reg_AddressComparator4>0x00000000</ETM_Reg_AddressComparator4>
+        <ETM_Reg_AddressComparator5>0x00000000</ETM_Reg_AddressComparator5>
+        <ETM_Reg_AddressComparator6>0x00000000</ETM_Reg_AddressComparator6>
+        <ETM_Reg_AddressComparator7>0x00000000</ETM_Reg_AddressComparator7>
+        <ETM_Reg_AddressComparator8>0x00000000</ETM_Reg_AddressComparator8>
+        <ETM_Reg_AddressComparator9>0x00000000</ETM_Reg_AddressComparator9>
+        <ETM_Reg_AddressComparator10>0x00000000</ETM_Reg_AddressComparator10>
+        <ETM_Reg_AddressComparator11>0x00000000</ETM_Reg_AddressComparator11>
+        <ETM_Reg_AddressComparator12>0x00000000</ETM_Reg_AddressComparator12>
+        <ETM_Reg_AddressComparator13>0x00000000</ETM_Reg_AddressComparator13>
+        <ETM_Reg_AddressComparator14>0x00000000</ETM_Reg_AddressComparator14>
+        <ETM_Reg_AddressComparator15>0x00000000</ETM_Reg_AddressComparator15>
+        <ETM_Reg_AddressComparator16>0x00000000</ETM_Reg_AddressComparator16>
+        <ETM_Reg_AddressAccessType1>0x00000001</ETM_Reg_AddressAccessType1>
+        <ETM_Reg_AddressAccessType2>0x00000001</ETM_Reg_AddressAccessType2>
+        <ETM_Reg_AddressAccessType3>0x00000001</ETM_Reg_AddressAccessType3>
+        <ETM_Reg_AddressAccessType4>0x00000001</ETM_Reg_AddressAccessType4>
+        <ETM_Reg_AddressAccessType5>0x00000001</ETM_Reg_AddressAccessType5>
+        <ETM_Reg_AddressAccessType6>0x00000001</ETM_Reg_AddressAccessType6>
+        <ETM_Reg_AddressAccessType7>0x00000001</ETM_Reg_AddressAccessType7>
+        <ETM_Reg_AddressAccessType8>0x00000001</ETM_Reg_AddressAccessType8>
+        <ETM_Reg_AddressAccessType9>0x00000001</ETM_Reg_AddressAccessType9>
+        <ETM_Reg_AddressAccessType10>0x00000001</ETM_Reg_AddressAccessType10>
+        <ETM_Reg_AddressAccessType11>0x00000001</ETM_Reg_AddressAccessType11>
+        <ETM_Reg_AddressAccessType12>0x00000001</ETM_Reg_AddressAccessType12>
+        <ETM_Reg_AddressAccessType13>0x00000001</ETM_Reg_AddressAccessType13>
+        <ETM_Reg_AddressAccessType14>0x00000001</ETM_Reg_AddressAccessType14>
+        <ETM_Reg_AddressAccessType15>0x00000001</ETM_Reg_AddressAccessType15>
+        <ETM_Reg_AddressAccessType16>0x00000001</ETM_Reg_AddressAccessType16>
+        <ETM_Reg_DataComparatorValue1>0x00000000</ETM_Reg_DataComparatorValue1>
+        <ETM_Reg_DataComparatorValue2>0x00000000</ETM_Reg_DataComparatorValue2>
+        <ETM_Reg_DataComparatorValue3>0x00000000</ETM_Reg_DataComparatorValue3>
+        <ETM_Reg_DataComparatorValue4>0x00000000</ETM_Reg_DataComparatorValue4>
+        <ETM_Reg_DataComparatorValue5>0x00000000</ETM_Reg_DataComparatorValue5>
+        <ETM_Reg_DataComparatorValue6>0x00000000</ETM_Reg_DataComparatorValue6>
+        <ETM_Reg_DataComparatorValue7>0x00000000</ETM_Reg_DataComparatorValue7>
+        <ETM_Reg_DataComparatorValue8>0x00000000</ETM_Reg_DataComparatorValue8>
+        <ETM_Reg_DataComparatorValue9>0x00000000</ETM_Reg_DataComparatorValue9>
+        <ETM_Reg_DataComparatorValue10>0x00000000</ETM_Reg_DataComparatorValue10>
+        <ETM_Reg_DataComparatorValue11>0x00000000</ETM_Reg_DataComparatorValue11>
+        <ETM_Reg_DataComparatorValue12>0x00000000</ETM_Reg_DataComparatorValue12>
+        <ETM_Reg_DataComparatorValue13>0x00000000</ETM_Reg_DataComparatorValue13>
+        <ETM_Reg_DataComparatorValue14>0x00000000</ETM_Reg_DataComparatorValue14>
+        <ETM_Reg_DataComparatorValue15>0x00000000</ETM_Reg_DataComparatorValue15>
+        <ETM_Reg_DataComparatorValue16>0x00000000</ETM_Reg_DataComparatorValue16>
+        <ETM_Reg_DataComparatorMask1>0x00000000</ETM_Reg_DataComparatorMask1>
+        <ETM_Reg_DataComparatorMask2>0x00000000</ETM_Reg_DataComparatorMask2>
+        <ETM_Reg_DataComparatorMask3>0x00000000</ETM_Reg_DataComparatorMask3>
+        <ETM_Reg_DataComparatorMask4>0x00000000</ETM_Reg_DataComparatorMask4>
+        <ETM_Reg_DataComparatorMask5>0x00000000</ETM_Reg_DataComparatorMask5>
+        <ETM_Reg_DataComparatorMask6>0x00000000</ETM_Reg_DataComparatorMask6>
+        <ETM_Reg_DataComparatorMask7>0x00000000</ETM_Reg_DataComparatorMask7>
+        <ETM_Reg_DataComparatorMask8>0x00000000</ETM_Reg_DataComparatorMask8>
+        <ETM_Reg_DataComparatorMask9>0x00000000</ETM_Reg_DataComparatorMask9>
+        <ETM_Reg_DataComparatorMask10>0x00000000</ETM_Reg_DataComparatorMask10>
+        <ETM_Reg_DataComparatorMask11>0x00000000</ETM_Reg_DataComparatorMask11>
+        <ETM_Reg_DataComparatorMask12>0x00000000</ETM_Reg_DataComparatorMask12>
+        <ETM_Reg_DataComparatorMask13>0x00000000</ETM_Reg_DataComparatorMask13>
+        <ETM_Reg_DataComparatorMask14>0x00000000</ETM_Reg_DataComparatorMask14>
+        <ETM_Reg_DataComparatorMask15>0x00000000</ETM_Reg_DataComparatorMask15>
+        <ETM_Reg_DataComparatorMask16>0x00000000</ETM_Reg_DataComparatorMask16>
+        <ETM_Reg_InitialCounterValue1>0x00000000</ETM_Reg_InitialCounterValue1>
+        <ETM_Reg_InitialCounterValue2>0x00000000</ETM_Reg_InitialCounterValue2>
+        <ETM_Reg_InitialCounterValue3>0x00000000</ETM_Reg_InitialCounterValue3>
+        <ETM_Reg_InitialCounterValue4>0x00000000</ETM_Reg_InitialCounterValue4>
+        <ETM_Reg_CounterEnable1>0x0002406F</ETM_Reg_CounterEnable1>
+        <ETM_Reg_CounterEnable2>0x0002406F</ETM_Reg_CounterEnable2>
+        <ETM_Reg_CounterEnable3>0x0002406F</ETM_Reg_CounterEnable3>
+        <ETM_Reg_CounterEnable4>0x0002406F</ETM_Reg_CounterEnable4>
+        <ETM_Reg_CounterReload1>0x0000406F</ETM_Reg_CounterReload1>
+        <ETM_Reg_CounterReload2>0x0000406F</ETM_Reg_CounterReload2>
+        <ETM_Reg_CounterReload3>0x0000406F</ETM_Reg_CounterReload3>
+        <ETM_Reg_CounterReload4>0x0000406F</ETM_Reg_CounterReload4>
+        <ETM_Reg_SequencerStateTransition1>0x00000000</ETM_Reg_SequencerStateTransition1>
+        <ETM_Reg_SequencerStateTransition2>0x00000000</ETM_Reg_SequencerStateTransition2>
+        <ETM_Reg_SequencerStateTransition3>0x00000000</ETM_Reg_SequencerStateTransition3>
+        <ETM_Reg_SequencerStateTransition4>0x00000000</ETM_Reg_SequencerStateTransition4>
+        <ETM_Reg_SequencerStateTransition5>0x00000000</ETM_Reg_SequencerStateTransition5>
+        <ETM_Reg_SequencerStateTransition6>0x00000000</ETM_Reg_SequencerStateTransition6>
+        <ETM_Reg_ExternalOutputs1>0x00000000</ETM_Reg_ExternalOutputs1>
+        <ETM_Reg_ExternalOutputs2>0x00000000</ETM_Reg_ExternalOutputs2>
+        <ETM_Reg_ExternalOutputs3>0x00000000</ETM_Reg_ExternalOutputs3>
+        <ETM_Reg_ExternalOutputs4>0x00000000</ETM_Reg_ExternalOutputs4>
+        <ETM_Reg_ContextIDValue1>0x00000000</ETM_Reg_ContextIDValue1>
+        <ETM_Reg_ContextIDValue2>0x00000000</ETM_Reg_ContextIDValue2>
+        <ETM_Reg_ContextIDValue3>0x00000000</ETM_Reg_ContextIDValue3>
+        <ETM_Reg_ContextIDMask>0x00000000</ETM_Reg_ContextIDMask>
+        <ETM_Reg_SynchronizationFrequency>0x00000400</ETM_Reg_SynchronizationFrequency>
+        <TraceBufferSize>0x00000000</TraceBufferSize>
+        <TraceShowTime>0</TraceShowTime>
+        <TraceShowTimeFreq>1000000</TraceShowTimeFreq>
+        <CStepIntDis>_ 0</CStepIntDis>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+    </JLinkDriver>
+    <SWOTraceHWSettings>
+        <OverrideDefaultClocks>0</OverrideDefaultClocks>
+        <CpuClock>72000000</CpuClock>
+        <ClockAutoDetect>0</ClockAutoDetect>
+        <ClockWanted>50000</ClockWanted>
+        <JtagSpeed>50000</JtagSpeed>
+        <Prescaler>1440</Prescaler>
+        <TimeStampPrescIndex>0</TimeStampPrescIndex>
+        <TimeStampPrescData>0</TimeStampPrescData>
+        <PcSampCYCTAP>1</PcSampCYCTAP>
+        <PcSampPOSTCNT>15</PcSampPOSTCNT>
+        <PcSampIndex>0</PcSampIndex>
+        <DataLogMode>0</DataLogMode>
+        <ITMportsEnable>0</ITMportsEnable>
+        <ITMportsTermIO>0</ITMportsTermIO>
+        <ITMportsLogFile>0</ITMportsLogFile>
+        <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
+    </SWOTraceHWSettings>
+    <struct_types>
+        <Fmt0>Car_Info_t-Car	4	0</Fmt0>
+        <Fmt1>Car_Info_t-SpeedControlD1	4	0</Fmt1>
+        <Fmt2>Car_Info_t-SpeedControlD2	4	0</Fmt2>
+        <Fmt3>Car_Info_t-SpeedControlP	4	0</Fmt3>
+        <Fmt4>Car_Info_t-TurnControlD1	4	0</Fmt4>
+        <Fmt5>Car_Info_t-TurnControlD2	4	0</Fmt5>
+        <Fmt6>ftm_config_t-pwmSyncMode	1	0</Fmt6>
+    </struct_types>
+    <array_types>
+        <Fmt0>int16_t[32]	1	0</Fmt0>
+        <Fmt1>uint8_t[19200]	3	0</Fmt1>
+        <Fmt2>uint8_t[2400]	1	0</Fmt2>
+        <Fmt3>uint8_t[5]	4	0</Fmt3>
+    </array_types>
+    <watch_formats>
+        <Fmt0>{W}1:((0x20U)&lt;&lt;8u)|((0x8U)&lt;&lt;16u)	1	0</Fmt0>
+        <Fmt1>{W}1:(0x10000000U+0x00002000U*(127-2))	4	0</Fmt1>
+        <Fmt2>{W}1:(NRF24L01_CONFIG)&amp;0x03	4	0</Fmt2>
+        <Fmt3>{W}1:(uint8_t*)NRF_RxBuf[1]	4	0</Fmt3>
+        <Fmt4>{W}1:NRF24L01_CONFIG	1	0</Fmt4>
+        <Fmt5>{W}1:Sensor_IDCode	4	0</Fmt5>
+        <Fmt6>{W}1:Width	4	0</Fmt6>
+        <Fmt7>{W}1:command	4	0</Fmt7>
+        <Fmt8>{W}1:flashOperationInfo.blockWriteUnitSize	4	0</Fmt8>
+        <Fmt9>{W}1:i	3	0</Fmt9>
+        <Fmt10>{W}1:rdata	4	0</Fmt10>
+        <Fmt11>{W}1:status	1	0</Fmt11>
+        <Fmt12>{W}1:x	3	0</Fmt12>
+        <Fmt13>{W}1:y	3	0</Fmt13>
+        <Fmt14>{W}42:((*(Message_t *)(NRF_RxBuf)).status.bit.ifStart)	1	0</Fmt14>
+        <Fmt15>{W}42:*IMG	4	0</Fmt15>
+        <Fmt16>{W}42:*IMG_A	4	0</Fmt16>
+        <Fmt17>{W}42:*IMG_B	4	0</Fmt17>
+        <Fmt18>{W}42:0x3A9F7B6E	3	0</Fmt18>
+        <Fmt19>{W}42:SpeedForecast_output	4	0</Fmt19>
+        <Fmt20>{W}42:fps	3	0</Fmt20>
+    </watch_formats>
+    <Log_file>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </Log_file>
+    <Interrupts>
+        <Enabled>1</Enabled>
+    </Interrupts>
+    <MemConfig>
+        <Base>1</Base>
+        <Manual>0</Manual>
+        <Ddf>1</Ddf>
+        <TypeViol>0</TypeViol>
+        <Stop>1</Stop>
+    </MemConfig>
+    <Simulator>
+        <Freq>10000000</Freq>
+        <MultiCoreRunAll>1</MultiCoreRunAll>
+    </Simulator>
+    <Disassemble_mode>
+        <mode>0</mode>
+    </Disassemble_mode>
+    <Trace1>
+        <Enabled>0</Enabled>
+        <ShowSource>1</ShowSource>
+    </Trace1>
+    <Trace2>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+    </Trace2>
+    <SWOTraceWindow>
+        <PcSampling>0</PcSampling>
+        <InterruptLogs>0</InterruptLogs>
+        <ForcedTimeStamps>0</ForcedTimeStamps>
+        <EventCPI>0</EventCPI>
+        <EventEXC>0</EventEXC>
+        <EventFOLD>0</EventFOLD>
+        <EventLSU>0</EventLSU>
+        <EventSLEEP>0</EventSLEEP>
+    </SWOTraceWindow>
+    <PowerLog>
+        <Title_0>I0</Title_0>
+        <Symbol_0>0 4 0</Symbol_0>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <LiveEnabled>0</LiveEnabled>
+        <LiveFile>PowerLogLive.log</LiveFile>
+    </PowerLog>
+    <DataLog>
+        <Title_0>PathPointsNum_last</Title_0>
+        <Symbol_0>1 2 1</Symbol_0>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+    </DataLog>
+    <InterruptLog>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+        <SumSortOrder>0</SumSortOrder>
+    </InterruptLog>
+    <EventLog>
+        <Title_0>Ch3</Title_0>
+        <Symbol_0>0 4 1</Symbol_0>
+        <Title_1>Ch2</Title_1>
+        <Symbol_1>0 4 1</Symbol_1>
+        <Title_2>Ch1</Title_2>
+        <Symbol_2>0 4 1</Symbol_2>
+        <Title_3>Ch0</Title_3>
+        <Symbol_3>0 4 1</Symbol_3>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+        <SumSortOrder>0</SumSortOrder>
+    </EventLog>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <DriverProfiling>
+        <Enabled>0</Enabled>
+        <Mode>1</Mode>
+        <Graph>0</Graph>
+        <Symbiont>0</Symbiont>
+        <Exclusions />
+    </DriverProfiling>
+    <CallStackLog>
+        <Enabled>0</Enabled>
+    </CallStackLog>
+    <CallStackStripe>
+        <ShowTiming>1</ShowTiming>
+    </CallStackStripe>
+    <PowerProbe>
+        <Frequency>10000</Frequency>
+        <Probe0>I0</Probe0>
+        <ProbeSetup0>2 1 1 2 0 0</ProbeSetup0>
+    </PowerProbe>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.3\红领巾KV58 暑假V1.3\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A0>
+        <A1>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.3\红领巾KV58 暑假V1.3\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A1>
+        <A2>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.3\红领巾KV58 暑假V1.3\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\app\main.c" ""</A2>
+        <A3>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.3\红领巾KV58 暑假V1.3\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A3>
+        <A4>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.4\红领巾KV58 暑假V1.4\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A4>
+        <A5>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.4\红领巾KV58 暑假V1.4\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A5>
+        <A6>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.4\红领巾KV58 暑假V1.4\KSDK2_MKV58F24\app\main.c" ""</A6>
+        <A7>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.4\红领巾KV58 暑假V1.4\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A7>
+        <A8>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.6 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A8>
+        <A9>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.6 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A9>
+        <A10>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.6 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\app\main.c" ""</A10>
+        <A11>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.6 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A11>
+        <A12>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.8 2B\红领巾KV58 暑假V1.7 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A12>
+        <A13>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.8 2B\红领巾KV58 暑假V1.7 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A13>
+        <A14>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.8 2B\红领巾KV58 暑假V1.7 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\app\main.c" ""</A14>
+        <A15>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V1.8 2B\红领巾KV58 暑假V1.7 2B\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A15>
+        <A16>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.1 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A16>
+        <A17>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.1 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A17>
+        <A18>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.1 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\app\main.c" ""</A18>
+        <A19>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.1 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A19>
+        <A20>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.2 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A20>
+        <A21>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.2 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A21>
+        <A22>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.2 2B\红领巾KV58 暑假V2.0 2B\KSDK2_MKV58F24\app\main.c" ""</A22>
+        <A23>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.4.5 nrf双向通信\红领巾KV58 暑假V2.4.5 nrf双向通信\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A23>
+        <A24>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.4.5 nrf双向通信\红领巾KV58 暑假V2.4.5 nrf双向通信\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A24>
+        <A25>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.4.5 nrf双向通信\红领巾KV58 暑假V2.4.5 nrf双向通信\KSDK2_MKV58F24\app\main.c" ""</A25>
+        <A26>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.4.5 nrf双向通信\红领巾KV58 暑假V2.4.5 nrf双向通信\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A26>
+        <A27>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.7\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A27>
+        <A28>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.7\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A28>
+        <A29>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.7\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\main.c" ""</A29>
+        <A30>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.7\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\src\PART_I2C&amp;&amp;SCCB.c" ""</A30>
+        <A31>_ "C:\Users\lenovo\Desktop\desktop\Folder\My Works\红领巾双车\红领巾KV58 暑假V2.7\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A31>
+        <A32>_ "D:\Proj_KV58\红领巾KV58 v1.6.0 校赛0.1\红领巾KV58 v1.0\KSDK2_MKV58F24\drivers\src\VCAN_OV7725_Eagle.c" ""</A32>
+        <A33>_ "E:\Proj_KV58\红领巾KV58 暑假V1.2\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A33>
+        <A34>_ "E:\Proj_KV58\红领巾KV58 暑假V1.2\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A34>
+        <A35>_ "E:\Proj_KV58\红领巾KV58 暑假V1.2\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\app\main.c" ""</A35>
+        <A36>_ "E:\Proj_KV58\红领巾KV58 暑假V1.2\红领巾KV58 WZQ V1.0\红领巾KV58 v1.0\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A36>
+        <A37>_ "E:\Proj_KV58\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A37>
+        <A38>_ "E:\Proj_KV58\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A38>
+        <A39>_ "E:\Proj_KV58\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\app\main.c" ""</A39>
+        <A40>_ "E:\Proj_KV58\红领巾KV58 暑假V1.6 带nrf单向通信\红领巾KV58 暑假V1.5\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A40>
+        <A41>_ "E:\Proj_KV58\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\CMSIS\Include\core_cm7.h" ""</A41>
+        <A42>_ "E:\Proj_KV58\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\MKV58F24\drivers\fsl_pit.h" ""</A42>
+        <A43>_ "E:\Proj_KV58\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\main.c" ""</A43>
+        <A44>_ "E:\Proj_KV58\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\src\RUS_GeneratePath.c" ""</A44>
+        <Count>45</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
+</settings>

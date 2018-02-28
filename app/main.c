@@ -31,7 +31,7 @@
 
 #include "include.h"
 
-int main(void)
+__ramfunc int main(void)
 {
   Init_ALL();
   
