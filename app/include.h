@@ -58,6 +58,7 @@ typedef float float32_t;
 // #include "ALEX_VL53L0X.h"          // 激光
 // #include "ALEX_LCD_ST7735.h"       // 小液晶
 // #include "VCAN_OV7725_Eagle.h"     // 山外鹰眼(OV7725)
+#include "ALEX_MT9V034.h"
      
 /*
  *      fsl middlewares

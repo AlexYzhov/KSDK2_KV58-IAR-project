@@ -51,21 +51,27 @@ define symbol __ram_vector_table_offset__ =  isdefinedsymbol(__ram_vector_table_
 define symbol m_interrupts_ram_start   = 0x00000000;
 define symbol m_interrupts_ram_end     = 0x00000000 + __ram_vector_table_offset__;
 
+/* ITCM Memory Map: 0x0000_0000 ~ 0x0000_FFFF */
 define symbol m_data_start             = m_interrupts_ram_start + __ram_vector_table_size__;
 define symbol m_data_end               = 0x0000FFFF;
 
+/* Flash Memory Map: 0x1000_0000 ~ 0x100F_FFFF */
 define symbol m_interrupts_start       = 0x10000000;
 define symbol m_interrupts_end         = 0x100003FF;
 
+/* Flash Memory Map: 0x1000_0000 ~ 0x100F_FFFF */
 define symbol m_flash_config_start     = 0x10000400;
 define symbol m_flash_config_end       = 0x1000040F;
 
+/* Flash Memory Map: 0x1000_0000 ~ 0x100F_FFFF */
 define symbol m_text_start             = 0x10000410;
 define symbol m_text_end               = 0x100FFFFF;
 
+/* DTCM Memory Map: 0x2000_0000 ~ 0x2001_FFFF */
 define symbol m_data_2_start           = 0x20000000;
 define symbol m_data_2_end             = 0x2001FFFF;
 
+/* OCRAM Memory Map: 0x2F00_0000 ~ 0x2F00_FFFF */
 define symbol m_data_3_start           = 0x2F000000;
 define symbol m_data_3_end             = 0x2F00FFFF;
 

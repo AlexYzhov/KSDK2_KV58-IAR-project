@@ -13,11 +13,10 @@
 #define SDA_H()         GPIOE->PSOR = 1U << 10U;
 #define SDA_L()         GPIOE->PCOR = 1U << 10U;
 #define SDA_IN()        ((GPIOE->PDIR&(1U<<10U))>>10U)
-#define SDA_DDR_OUT()   GPIOE->PDDR&=(uint32_t)~(1U<<10U);\
-                        GPIOE->PDDR|=(uint32_t)(1U<<10U);
-#define SDA_DDR_IN()    GPIOE->PDDR&=(uint32_t)~(1U<<10U);
+#define SDA_DDR_OUT()   do{GPIOE->PDDR&=(uint32_t)~(1U<<10U);GPIOE->PDDR|=(uint32_t)(1U<<10U);}while(0)
+#define SDA_DDR_IN()    do{GPIOE->PDDR&=(uint32_t)~(1U<<10U);}while(0)
 
-#define SCCB_DELAY()    ALEX_CPU_Delay(200)
+#define SCCB_DELAY()    ALEX_CPU_Delay(1200)
 
 // #define SCCB_WriteByte(base, SlaveAddress, REG_Address, REG_data) I2C_WriteByte(base, SlaveAddress, REG_Address, REG_data)
 extern void I2C_WriteByte(I2C_Type *base, uint8_t SlaveAddress, uint8_t REG_Address,unsigned char REG_data);

@@ -31,12 +31,18 @@
 
 #include "include.h"
 
-__ramfunc int main(void)
+uint32_t main(void)
 {
   Init_ALL();
+  MT9V034_Reg_Init(MT9V034_SLAVE_ADDRESS);
   
   for(;;)
   {
      
-  }  
+  }
+}
+
+void HardFault_Handler()
+{
+  return;
 }

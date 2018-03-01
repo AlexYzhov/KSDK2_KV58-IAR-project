@@ -2443,9 +2443,18 @@
         <name>drivers</name>
         <group>
             <name>inc</name>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034_REG.h</name>
+            </file>
         </group>
         <group>
             <name>src</name>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</name>
+            </file>
         </group>
     </group>
     <group>

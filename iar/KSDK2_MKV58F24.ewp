@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>Automatic choice of formatter.</state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Automatic choice of formatter.</state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -783,11 +783,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\NXP\MKV5xF1M0xxx24.icf</state>
+                    <state>D:\Proj_Kinetis\iar\KSDK2_MKV58F24.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2163,9 +2163,18 @@
         <name>drivers</name>
         <group>
             <name>inc</name>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034_REG.h</name>
+            </file>
         </group>
         <group>
             <name>src</name>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</name>
+            </file>
         </group>
     </group>
     <group>

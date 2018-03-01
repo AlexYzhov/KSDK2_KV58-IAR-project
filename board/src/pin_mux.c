@@ -62,8 +62,11 @@ void InitPins_I2C1_VL53L0X(void)
         kPORT_MuxAlt2,                          // ∏¥”√≥…I2C1
         kPORT_UnlockRegister,                   // 0 ~ kPORT_UnLockRegister, 1 ~ kPORT_LockRegister
     };
-    PORT_SetPinConfig(PORTC, 10u, &i2c1);       // PTC10 ~ I2C0_SCL
-    PORT_SetPinConfig(PORTC, 11u, &i2c1);       // PTC11 ~ I2C0_SDA
+    PORT_SetPinConfig(PORTC, 10u, &i2c1);       // PTC10 ~ I2C1_SCL
+    PORT_SetPinConfig(PORTC, 11u, &i2c1);       // PTC11 ~ I2C1_SDA
+  
+    //PORT_SetPinMux(PORTC,  10u, kPORT_MuxAlt2);
+    //PORT_SetPinMux(PORTC,  11u, kPORT_MuxAlt2);
 }
 
 /*!

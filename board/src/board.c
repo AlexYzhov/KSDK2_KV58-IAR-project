@@ -113,7 +113,7 @@ void BOARD_InitI2C1(void)
     i2c_master_config_t I2C1_config;
     
     I2C_MasterGetDefaultConfig(&I2C1_config);           // 获取I2C默认设置
-    I2C1_config.baudRate_Bps = 400*1000U;               // 设置I2C1通信速率400K
+    I2C1_config.baudRate_Bps = 400*1000U;               // 设置I2C1通信速率200K
     I2C1_config.enableMaster = true;                   // 设置I2C1为主机
     
     I2C_MasterInit(I2C1, &I2C1_config, SystemBusClock); // I2C的输入时钟为Bus Clock
@@ -121,13 +121,14 @@ void BOARD_InitI2C1(void)
 
 void BOARD_InitI2C3(void)
 {
-    // i2c_master_config_t I2C3_config;
-    // 
-    // I2C_MasterGetDefaultConfig(&I2C3_config);           // 获取I2C默认设置
-    // I2C3_config.baudRate_Bps = 200*1000U;               // 设置I2C3通信速率400K
-    // I2C3_config.enableMaster = true;                   // 设置I2C3为主机
+  /*
+    i2c_master_config_t I2C3_config;
+    I2C_MasterGetDefaultConfig(&I2C3_config);           // 获取I2C默认设置
+    I2C3_config.baudRate_Bps = 200*1000U;               // 设置I2C3通信速率400K
+    I2C3_config.enableMaster = true;                   // 设置I2C3为主机
     
-    // I2C_MasterInit(I2C3, &I2C3_config, SystemBusClock); // I2C的输入时钟为Bus Clock
+    I2C_MasterInit(I2C3, &I2C3_config, SystemBusClock); // I2C的输入时钟为Bus Clock
+  */
     
     gpio_pin_config_t GPIO_SCCB_config;
     
@@ -611,23 +612,23 @@ void BOARD_InitALL(void)
 {
     BOARD_InitPins();
     
-    BOARD_InitUART0();
-    BOARD_InitUART4();
-    BOARD_InitADC1();
+    //BOARD_InitUART0();
+    //BOARD_InitUART4();
+    //BOARD_InitADC1();
     BOARD_InitI2C1();
     BOARD_InitI2C3();
-    BOARD_InitSPI0();
-    BOARD_InitSPI1();
-    BOARD_InitSPI2();
-    BOARD_InitFTM0();
-    BOARD_InitFTM1();
-    BOARD_InitFTM2();
-    BOARD_InitFTM3();
-    BOARD_InitPIT0();
-    BOARD_InitPIT1();
-    BOARD_InitPIT2();
-    BOARD_InitPIT3();
-    BOARD_InitLPTMR();
+    //BOARD_InitSPI0();
+    //BOARD_InitSPI1();
+    //BOARD_InitSPI2();
+    //BOARD_InitFTM0();
+    //BOARD_InitFTM1();
+    //BOARD_InitFTM2();
+    //BOARD_InitFTM3();
+    //BOARD_InitPIT0();
+    //BOARD_InitPIT1();
+    //BOARD_InitPIT2();
+    //BOARD_InitPIT3();
+    //BOARD_InitLPTMR();
     BOARD_InitGPIO();
     BOARD_InitGPIO_Camera();
     BOARD_InitDMA();
