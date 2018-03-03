@@ -1,112 +1,106 @@
-"E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\drivers\src\ALEX_LCD_ST7735.c"
--std=c99
--ferror-limit=100
+"D:\Proj_Kinetis\drivers\src\ALEX_LCD_ST7735.c"
+-std=c11
+-ferror-limit=0
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../app/
+D:\Proj_Kinetis\iar/../app/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../app/inc/
+D:\Proj_Kinetis\iar/../app/inc/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../app/src/
+D:\Proj_Kinetis\iar/../app/src/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../board/
+D:\Proj_Kinetis\iar/../board/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../board/inc/
+D:\Proj_Kinetis\iar/../board/inc/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../board/src/
+D:\Proj_Kinetis\iar/../board/src/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../drivers/inc/
+D:\Proj_Kinetis\iar/../drivers/inc/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../drivers/src/
+D:\Proj_Kinetis\iar/../drivers/src/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../Library/
+D:\Proj_Kinetis\iar/../Library/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../Library/CMSIS/Include/
+D:\Proj_Kinetis\iar/../Library/CMSIS/Include/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../Library/MKV58F24/
+D:\Proj_Kinetis\iar/../Library/MKV58F24/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../Library/MKV58F24/drivers/
+D:\Proj_Kinetis\iar/../Library/MKV58F24/drivers/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../Library/MKV58F24/startup/
+D:\Proj_Kinetis\iar/../Library/MKV58F24/startup/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../Library/MKV58F24/utilities/
+D:\Proj_Kinetis\iar/../Library/MKV58F24/utilities/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/dma_manager_2.1.0/
+D:\Proj_Kinetis\iar/../middleware/dma_manager_2.1.0/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/sdmmc_2.1.2/inc/
+D:\Proj_Kinetis\iar/../middleware/sdmmc_2.1.2/inc/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/sdmmc_2.1.2/src/
+D:\Proj_Kinetis\iar/../middleware/sdmmc_2.1.2/src/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/fatfs_0.12b/src/
+D:\Proj_Kinetis\iar/../middleware/fatfs_0.12b/src/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/fatfs_0.12b/src/fsl_sd_disk/
+D:\Proj_Kinetis\iar/../middleware/fatfs_0.12b/src/fsl_sd_disk/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/fatfs_0.12b/src/fsl_mmc_disk/
+D:\Proj_Kinetis\iar/../middleware/fatfs_0.12b/src/fsl_mmc_disk/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/Terminal_0.01a/inc/
+D:\Proj_Kinetis\iar/../middleware/Terminal_0.01a/inc/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../middleware/Terminal_0.01a/src/
+D:\Proj_Kinetis\iar/../middleware/Terminal_0.01a/src/
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../../..
+D:\Proj_Kinetis\iar/../../..
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\iar/../
+D:\Proj_Kinetis\iar/../
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc\c
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app
+D:\Proj_Kinetis\app
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\inc
+D:\Proj_Kinetis\app\inc
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\app\src
+D:\Proj_Kinetis\app\src
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\board
+D:\Proj_Kinetis\board
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\board\inc
+D:\Proj_Kinetis\board\inc
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\board\src
+D:\Proj_Kinetis\board\src
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\drivers\inc
+D:\Proj_Kinetis\drivers\inc
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\drivers\src
+D:\Proj_Kinetis\drivers\src
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library
+D:\Proj_Kinetis\Library
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\CMSIS\Include
+D:\Proj_Kinetis\Library\CMSIS\Include
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\MKV58F24
+D:\Proj_Kinetis\Library\MKV58F24
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\MKV58F24\drivers
+D:\Proj_Kinetis\Library\MKV58F24\drivers
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\MKV58F24\startup
+D:\Proj_Kinetis\Library\MKV58F24\startup
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\Library\MKV58F24\utilities
+D:\Proj_Kinetis\Library\MKV58F24\utilities
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\dma_manager_2.1.0
+D:\Proj_Kinetis\middleware\dma_manager_2.1.0
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\sdmmc_2.1.2\inc
+D:\Proj_Kinetis\middleware\sdmmc_2.1.2\inc
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\sdmmc_2.1.2\src
+D:\Proj_Kinetis\middleware\sdmmc_2.1.2\src
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\fatfs_0.12b\src
+D:\Proj_Kinetis\middleware\fatfs_0.12b\src
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\fatfs_0.12b\src\fsl_sd_disk
+D:\Proj_Kinetis\middleware\fatfs_0.12b\src\fsl_sd_disk
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\fatfs_0.12b\src\fsl_mmc_disk
+D:\Proj_Kinetis\middleware\fatfs_0.12b\src\fsl_mmc_disk
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\Terminal_0.01a\inc
+D:\Proj_Kinetis\middleware\Terminal_0.01a\inc
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24\middleware\Terminal_0.01a\src
+D:\Proj_Kinetis\middleware\Terminal_0.01a\src
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本
+D:
 -I
-E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
--DDEBUG=1
--DCPU_MKV58F1M0VLQ24_cm7=1
--DFSL_RTOS_BM=1
--DCPU_MKV58F1M0VLQ24=1
--DSDK_CORE_ID_CORE0=1
--DSDK_OS_BAREMETAL=1
+D:\Proj_Kinetis
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -223,6 +217,16 @@ E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
 -D__INTMAX_C_SUFFIX__=LL
 -D__UINTMAX_C_SUFFIX__=ULL
 -D__INTMAX_SIZE_PREFIX__="ll"
+-D__ATOMIC_BOOL_LOCK_FREE=2
+-D__ATOMIC_CHAR_LOCK_FREE=2
+-D__ATOMIC_CHAR16_T_LOCK_FREE=2
+-D__ATOMIC_CHAR32_T_LOCK_FREE=2
+-D__ATOMIC_WCHAR_T_LOCK_FREE=2
+-D__ATOMIC_SHORT_LOCK_FREE=2
+-D__ATOMIC_INT_LOCK_FREE=2
+-D__ATOMIC_LONG_LOCK_FREE=2
+-D__ATOMIC_LLONG_LOCK_FREE=0
+-D__ATOMIC_POINTER_LOCK_FREE=2
 -D__FLOAT_SIZE__=4
 -D__FLOAT_ALIGN__=4
 -D__DOUBLE_SIZE__=8
@@ -236,24 +240,24 @@ E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
 -D__PTRDIFF_T_TYPE__=signed int
 -D__PTRDIFF_T_MAX__=2147483647
 -D__PTRDIFF_T_MIN__=(-__PTRDIFF_T_MAX__-1)
--D__INTPTR_T_TYPE__=signed long int
--D__INTPTR_T_MAX__=2147483647L
+-D__INTPTR_T_TYPE__=signed int
+-D__INTPTR_T_MAX__=2147483647
 -D__INTPTR_T_MIN__=(-__INTPTR_T_MAX__-1)
--D__UINTPTR_T_TYPE__=unsigned long int
--D__UINTPTR_T_MAX__=0xffffffffUL
--D__INTPTR_SIZE_PREFIX__="l"
+-D__UINTPTR_T_TYPE__=unsigned int
+-D__UINTPTR_T_MAX__=0xffffffffU
+-D__INTPTR_SIZE_PREFIX__=""
 -D__JMP_BUF_ELEMENT_TYPE__=unsigned long long int
 -D__JMP_BUF_NUM_ELEMENTS__=16
 -D__TID__=0xcf60
--D__VER__=7080003
--D__BUILD_NUMBER__=12102
--D__IAR_SYSTEMS_ICC__=8
+-D__VER__=8020001
+-D__BUILD_NUMBER__=14183
+-D__IAR_SYSTEMS_ICC__=9
 -D__LITTLE_ENDIAN__=1
 -D__BOOL_TYPE__=unsigned char
 -D__BOOL_SIZE__=1
--D__WCHAR_T_TYPE__=unsigned short int
--D__WCHAR_T_SIZE__=2
--D__WCHAR_T_MAX__=0xffff
+-D__WCHAR_T_TYPE__=unsigned int
+-D__WCHAR_T_SIZE__=4
+-D__WCHAR_T_MAX__=0xffffffffU
 -D__DEF_PTR_MEM__=__data
 -D__DEF_PTR_SIZE__=4
 -D__CODE_MEMORY_LIST3__(_P1,_P2)=__CODE_MEM_HELPER3__(__code, 0, _P1, _P2)
@@ -265,14 +269,14 @@ E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
 -D__DATA_MEM0_INTPTR_TYPE__=int
 -D__DATA_MEM0_UINTPTR_TYPE__=unsigned int
 -D__DATA_MEM0_INTPTR_SIZE_PREFIX__=""
--D__DATA_MEM0_MAX_SIZE__=0x7fffffff
+-D__DATA_MEM0_MAX_SIZE__=0x7fffffffU
+-D_RSIZE_MAX=0x7fffffffU
 -D__DATA_MEM0_HEAP_SEGMENT__="HEAP"
 -D__DATA_MEM0_PAGE_SIZE__=0
 -D__DATA_MEM0_HEAP__=0
 -D__CODE_MEM0__=__code
 -D__CODE_MEM0_POINTER_OK__=1
 -D__CODE_MEM0_UNIQUE_POINTER__=1
--D__CODE_MEM0_VAR_OK__=1
 -D__CODE_PTR_MEMORY_LIST3__(_P1,_P2)=__CODE_PTR_MEM_HELPER3__(__code, 0, _P1, _P2)
 -D__DATA_PTR_MEMORY_LIST3__(_P1,_P2)=__DATA_PTR_MEM_HELPER3__(__data, 0, _P1, _P2)
 -D__VAR_MEMORY_LIST3__(_P1,_P2)=__VAR_MEM_HELPER3__(__data, 0, _P1, _P2)
@@ -313,12 +317,18 @@ E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
 -D__ARM_ARCH_ISA_THUMB=2
 -D__ARM_ARCH_PROFILE='M'
 -D__ARM_BIG_ENDIAN=0
+-D__ARM_FEATURE_DIRECTED_ROUNDING=1
 -D__ARM_FEATURE_DSP=1
+-D__ARM_FEATURE_FMA=1
 -D__ARM_FEATURE_IDIV=1
+-D__ARM_FEATURE_NUMERIC_MAXMIN=1
+-D__ARM_FEATURE_UNALIGNED=1
+-D__ARM_FP=6
 -D__ARM_MEDIA__=1
 -D__ARM_PROFILE_M__=1
 -D__CORE__=__ARM7EM__
 -D__CPU_MODE__=1
+-D__ICCARM_INTRINSICS_VERSION__=2
 -D__ICCARM__=1
 -D__INTERWORKING__=1
 -D__PLAIN_INT_BITFIELD_IS_SIGNED__=0
@@ -327,18 +337,32 @@ E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
 -D__HAS_JOINED_TYPES__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
--D__IAR_COMPILERBASE__=595456
+-D__IAR_COMPILERBASE__=655873
+-D__IAR_COMPILERBASE_STR__=10.2.1.194
+-D__UNICODE_SOURCE_SUPPORTED__=1
 -D__STDC__=1
--D__STDC_VERSION__=199901L
--D__STDC_HOSTED__=1
+-D__STDC_VERSION__=201112L
 -D__STDC_NO_VLA__=1
--D__STDC_NO_ATOMICS__=1
+-D__MEMORY_ORDER_RELAXED__=0
+-D__MEMORY_ORDER_CONSUME__=1
+-D__MEMORY_ORDER_ACQUIRE__=2
+-D__MEMORY_ORDER_RELEASE__=3
+-D__MEMORY_ORDER_ACQ_REL__=4
+-D__MEMORY_ORDER_SEQ_CST__=5
+-D__STDC_UTF_16__=1
+-D__STDC_UTF_32__=1
+-D__STDC_LIB_EXT1__=201112L
+-D__STDC_NO_THREADS__=1
+-D__STDC_ISO_10646__=201103L
+-D__STDC_HOSTED__=1
 -D__EDG_IA64_ABI=1
 -D__EDG_IA64_ABI_VARIANT_CTORS_AND_DTORS_RETURN_THIS=1
 -D__EDG_IA64_ABI_USE_INT_STATIC_INIT_GUARD=1
+-D__cpp_unicode_literals=200710
+-D__cpp_static_assert=200410
 -D__EDG_TYPE_TRAITS_ENABLED=1
 -D__EDG__=1
--D__EDG_VERSION__=410
+-D__EDG_VERSION__=413
 -D__EDG_SIZE_TYPE__=unsigned int
 -D__EDG_PTRDIFF_TYPE__=int
 -D__EDG_DELTA_TYPE=int
@@ -354,9 +378,19 @@ E:\Proj_KV58\红领巾KV58 省赛 V2 - 副本\红领巾KV58 暑假V2.6\KSDK2_MKV58F24
 -D__EDG_SYSV=0
 -D__EDG_ANSIC=1
 -D__EDG_CPP11_IL_EXTENSIONS_SUPPORTED=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\INC\c\DLib_Config_Normal.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 7.5\\arm\\INC\\c\\DLib_Config_Normal.h"
--D__VERSION__="IAR ANSI C/C++ Compiler V7.80.3.12102/W32 for ARM"
+-D__EDG_FLOAT80_ENABLING_POSSIBLE=0
+-D__EDG_FLOAT128_ENABLING_POSSIBLE=0
+-DDEBUG=1
+-DCPU_MKV58F1M0VLQ24_cm7=1
+-DFSL_RTOS_BM=1
+-DCPU_MKV58F1M0VLQ24=1
+-DSDK_CORE_ID_CORE0=1
+-DSDK_OS_BAREMETAL=1
+-D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
+-D__VERSION__="IAR ANSI C/C++ Compiler V8.20.1.14183/W32 for ARM"
+-D__ICCARM_OLD_DEFINED_VAARGS__=1
+-D__VA_STACK_ALIGN__=8
 -D__CODE_MEMORY_LIST1__()=__CODE_MEM_HELPER1__(__code, 0 )
 -D__CODE_MEMORY_LIST2__(_P1)=__CODE_MEM_HELPER2__(__code, 0 ,  _P1 )
 -D__CODE_MEMORY_LIST3__(_P1, _P2)=__CODE_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )

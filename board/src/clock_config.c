@@ -137,15 +137,15 @@ const mcg_config_t mcgConfig_BOARD_BootClockRUN =
         .pll0Config =
             {
                 .enableMode = MCG_PLL_DISABLE,    /* MCGPLLCLK disabled */
-                .prdiv = 0x02U,                    /* PLL Reference divider: divided by 3 */
-                .vdiv = 0x0EU,                     /* VCO divider: multiplied by 30 */
+                .prdiv = 2+1,                    /* PLL Reference divider: divided by 4 */
+                .vdiv = 44-16,                     /* VCO divider: multiplied by 44 */
             },
     };
 const sim_clock_config_t simConfig_BOARD_BootClockRUN =
     {
         .pllFllSel = SIM_PLLFLLSEL_MCGFLLCLK_CLK, /* PLLFLL select: MCGFLLCLK clock */
         .er32kSrc = SIM_OSC32KSEL_OSC32KCLK_CLK,  /* OSC32KSEL select: OSC32KCLK clock */
-        .clkdiv1 = 0x013B0000U,                    /* SIM_CLKDIV1 - OUTDIV1: /1, OUTDIV2: /2, OUTDIV3: /4, OUTDIV4: /8 */
+        .clkdiv1 = 0x01390000U,                    /* SIM_CLKDIV1 - OUTDIV1: /1, OUTDIV2: /2, OUTDIV3: /4, OUTDIV4: /10 */
     };
 const osc_config_t oscConfig_BOARD_BootClockRUN =
     {

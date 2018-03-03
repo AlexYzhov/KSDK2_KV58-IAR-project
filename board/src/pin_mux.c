@@ -28,7 +28,7 @@ void InitPins_UART0_LPC824(void)
  */
 void InitPins_UART4_UpperCOM(void)
 {
-    PORT_SetPinMux(PORTE, 24U, kPORT_MuxAlt8); // PTE24 ~ UART4_TX
+    PORT_SetPinMux(PORTE, 24U, kPORT_MuxAlt8);   // PTE24 ~ UART4_TX
     PORT_SetPinMux(PORTE, 25U, kPORT_MuxAlt8);   // PTE25 ~ UART4_RX
         
     // SIM->SOPT5 = ((SIM->SOPT5 &
@@ -367,9 +367,9 @@ void InitPins_GPIO_LCD(void)
     /* Output pin PORT configuration */
     port_pin_config_t gpio_lcd = 
     {
-        kPORT_PullDisable,                      // 内部输入不上拉
+        kPORT_PullUp,                           // 内部输入上拉
         kPORT_FastSlewRate,                     // 高速翻转模式
-        kPORT_PassiveFilterDisable,             // 无源滤波关闭
+        kPORT_PassiveFilterEnable,             // 无源滤波关闭
         kPORT_OpenDrainDisable,                 // 推挽输出
         kPORT_HighDriveStrength,                // 高驱动能力
         kPORT_MuxAsGpio,                        // 复用成GPIO(输出)

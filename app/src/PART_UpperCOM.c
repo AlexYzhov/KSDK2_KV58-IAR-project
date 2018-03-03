@@ -1,26 +1,28 @@
 #include "include.h"
 
-void UpperCOM_PutBuff(uint8_t *buff, uint32_t len)
+__ramfunc void UpperCOM_PutBuff(uint8_t *buff, uint32_t len)
 {
     while(len--)
     {
-        UART_WriteByte(UpperCOM, *buff);
-        ALEX_CPU_Delay(0x2000);
+        UpperCOM->D = *buff;
+        ALEX_CPU_Delay(0x1100);
+        //while (!(UpperCOM->S1 & UART_S1_TDRE_MASK));
+        
         buff++;
     }
 }
 
-void UpperCOM_SendImg(void *ImgAddr, uint32_t ImgSize)
+__ramfunc void UpperCOM_SendImg(void *ImgAddr, uint32_t ImgSize)
 {
-    uint8_t HEAD[2] = { 0x01, 0xFE };
-    uint8_t TAIL[2] = { 0xFE, 0x01 };
+    static uint8_t HEAD[2] = { 0x01, 0xFE };
+    static uint8_t TAIL[2] = { 0xFE, 0x01 };
 
     UpperCOM_PutBuff(HEAD, sizeof(HEAD));          //先发送命令
     UpperCOM_PutBuff((uint8_t *)ImgAddr, ImgSize); //再发送图像
     UpperCOM_PutBuff(TAIL, sizeof(TAIL));          //再发送命令
 }
 
-void UpperCOM_SendWare(void *WareAddr, uint32_t WareSize)
+__ramfunc void UpperCOM_SendWare(void *WareAddr, uint32_t WareSize)
 {
     static uint8_t HEAD[2];
         HEAD[0] = 0x03U;

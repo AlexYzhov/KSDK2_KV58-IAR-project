@@ -76,7 +76,7 @@ place at address mem:__ICFEDIT_intvec_start__ { readonly section .intvec };
 
 place in IROM_region  { readonly };
 place in ITCM_region  { section .textrw };
-place in DTCM_region  {};
+place in DTCM_region  {  };
 place in EROM_region  { readonly section application_specific_ro };
 place in IRAM_region  { readwrite, block CSTACK, block HEAP };
 place in ERAM_region  { readwrite section application_specific_rw };

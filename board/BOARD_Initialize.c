@@ -15,7 +15,7 @@ void Init_ALL(void)
     __enable_irq();
 }
 
-void ALEX_lptmr_DelayMs(uint32_t ms)
+__ramfunc void ALEX_lptmr_DelayMs(uint32_t ms)
 {
     //LPTMR_StartTimer(LPTMR0); 
     
@@ -43,7 +43,7 @@ void ALEX_lptmr_DelayMs(uint32_t ms)
     //LPTMR_StopTimer (LPTMR0);
 }
 
-void ALEX_CPU_Delay(volatile uint32_t cnt)
+__ramfunc void ALEX_CPU_Delay(volatile uint32_t cnt)
 {
     while(cnt--);
 }

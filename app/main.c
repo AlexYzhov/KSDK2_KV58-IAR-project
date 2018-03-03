@@ -31,14 +31,58 @@
 
 #include "include.h"
 
+bool MT9V034_CaptureAccomplished = false;
+volatile uint8_t MT9V034_IMGBUFF[MT9V034_SIZE];
+
+void PORTA_IRQHandler(void)
+{
+    //volatile uint32_t ISFR_FLAG = PORTA->ISFR;
+    //PORTA->ISFR = 0x00000000;
+    
+    MT9V034_FrameValid_Callback(PORTA->ISFR);
+}
+
+void DMA0_DMA16_IRQHandler(void)
+{
+    MT9V034_DMA_Callback();
+}
+
 uint32_t main(void)
 {
   Init_ALL();
-  MT9V034_Reg_Init(MT9V034_SLAVE_ADDRESS);
+  
+  MT9V034_Init();
+  
+  while(GPIOA->PDIR&(1U<<17U));           //DKEY4�����£���ȴ�
+        
+  if(GPIOA->PDIR&(1U<<14U))         //DKEY3������
+  {
+      SIM->CLKDIV1 = 0x01340000U;
+  }
+  else
+  {
+      SIM->CLKDIV1 = 0x01390000U;
+  }
+  
+  //LCD_Init();
+  //LCD_Clear(BLACK);
+  //LCD_String((Point_t){60, 60}, "Hello", WHITE, BLACK);
+  
+  //GPIO_WritePinOutput(GPIOC, 0U, 0U);
+  GPIOC->PCOR |= (1U<<0U);
+  
+  //UpperCOM_PutBuff("Hello World!\r\n", sizeof("Hello World!\r\n"));
   
   for(;;)
   {
-     
+      if(MT9V034_CaptureAccomplished)
+      {
+          DisableIRQ(PORTA_IRQn);
+          UpperCOM_SendImg(MT9V034_IMGBUFF, sizeof(MT9V034_IMGBUFF));
+          EnableIRQ(PORTA_IRQn);
+      }
+      
+      
   }
 }
 

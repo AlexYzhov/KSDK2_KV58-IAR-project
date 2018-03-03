@@ -56,7 +56,7 @@ typedef float float32_t;
 // #include "ALEX_L3G4200D.h"         // 陀螺仪
 // #include "ALEX_NRF24L01.h"         // 无线通信
 // #include "ALEX_VL53L0X.h"          // 激光
-// #include "ALEX_LCD_ST7735.h"       // 小液晶
+#include "ALEX_LCD_ST7735.h"       // 小液晶
 // #include "VCAN_OV7725_Eagle.h"     // 山外鹰眼(OV7725)
 #include "ALEX_MT9V034.h"
      
@@ -83,7 +83,7 @@ typedef float float32_t;
 #include "PART_UpperCOM.h"
      
 extern void Init_ALL(void);
-extern void ALEX_lptmr_DelayMs(uint32_t ms);
-extern void ALEX_CPU_Delay(volatile uint32_t cnt);
+extern __ramfunc void ALEX_lptmr_DelayMs(uint32_t ms);
+extern __ramfunc void ALEX_CPU_Delay(volatile uint32_t cnt);
 
 #endif

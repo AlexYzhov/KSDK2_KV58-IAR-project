@@ -2,9 +2,8 @@
 #define _ALEX_MT9V034_REG_H_
 
 #define MT9V034_SLAVE_ADDRESS                   (0x5C)
-
-#define MT9V034_MAX_HEIGHT				        (480)
-#define MT9V034_MAX_WIDTH					    (752)
+#define MT9V034_MAX_HEIGHT                      (480)
+#define MT9V034_MAX_WIDTH                       (752)
 
 #define MT9V034_CHIP_VERSION                    (0x00)
 #define     MT9V034_DEFAULT_VERSION                     (0x1324)

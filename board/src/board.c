@@ -29,11 +29,11 @@ void BOARD_InitUART4(void)
 {
     uart_config_t UART4_config;
     
-    UART4_config.baudRate_Bps = 256000U;                          // 波特率：9600
+    UART4_config.baudRate_Bps = 256000u;                          // 波特率：115200
     UART4_config.parityMode = kUART_ParityDisabled;             // 校验位：None
     UART4_config.stopBitCount = kUART_OneStopBit;               // 停止位：1
-    UART4_config.txFifoWatermark = 0;                           // tx缓冲：0
-    UART4_config.rxFifoWatermark = 0;                           // rx缓冲：0
+    UART4_config.txFifoWatermark = 1;                           // tx缓冲：0
+    UART4_config.rxFifoWatermark = 1;                           // rx缓冲：0
     UART4_config.enableRx = true;
     UART4_config.enableTx = true;
     
@@ -613,9 +613,9 @@ void BOARD_InitALL(void)
     BOARD_InitPins();
     
     //BOARD_InitUART0();
-    //BOARD_InitUART4();
+    BOARD_InitUART4();
     //BOARD_InitADC1();
-    BOARD_InitI2C1();
+    //BOARD_InitI2C1();
     BOARD_InitI2C3();
     //BOARD_InitSPI0();
     //BOARD_InitSPI1();

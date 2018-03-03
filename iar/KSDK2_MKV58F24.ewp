@@ -759,11 +759,11 @@
                 </option>
                 <option>
                     <name>IlinkMapFile</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogFile</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogInitialization</name>
@@ -775,7 +775,7 @@
                 </option>
                 <option>
                     <name>IlinkLogSection</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogVeneer</name>
@@ -992,7 +992,7 @@
                 </option>
                 <option>
                     <name>IlinkLogCallGraph</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile_AltDefault</name>
@@ -2164,6 +2164,9 @@
         <group>
             <name>inc</name>
             <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_LCD_ST7735.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034.h</name>
             </file>
             <file>
@@ -2172,6 +2175,9 @@
         </group>
         <group>
             <name>src</name>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\src\ALEX_LCD_ST7735.c</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</name>
             </file>

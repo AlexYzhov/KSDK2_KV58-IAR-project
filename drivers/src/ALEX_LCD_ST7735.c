@@ -24,26 +24,25 @@ void LCD_Write_Data(uint8_t data)
     LCD_WR_OUT = 1;
     LCD_CS_OUT = 1;
 #else                       // Cortex M7不支持BITBAND_REG
-    GPIO_WritePinOutput(GPIOC, 12U, 1);
-    GPIO_WritePinOutput(GPIOC, 19U, 1);
-    GPIO_WritePinOutput(GPIOD,  4U, 0);
+    GPIO_WritePinOutput(GPIOC, 12U, 1);    // RD ~ C12
+    GPIO_WritePinOutput(GPIOC, 19U, 1);    // RS ~ RS
+    GPIO_WritePinOutput(GPIOD,  4U, 0);    // CS ~ D4
     
-    // LCD_BYTE.bit.D7 = (data&0x80)>>7;
-    // LCD_BYTE.bit.D6 = (data&0x40)>>6;
-    // LCD_BYTE.bit.D5 = (data&0x20)>>5;
-    // LCD_BYTE.bit.D4 = (data&0x10)>>4;
-    // LCD_BYTE.bit.D3 = (data&0x08)>>3;
-    // LCD_BYTE.bit.D2 = (data&0x04)>>2;
-    // LCD_BYTE.bit.D1 = (data&0x02)>>1;
-    // LCD_BYTE.bit.D0 = (data&0x01)>>0;
+    LCD_BYTE.bit.D7 = (data>>1)&0x01;      //(data&0x80)>>7;
+    LCD_BYTE.bit.D6 = (data>>0)&0x01;      //(data&0x40)>>6;
+    LCD_BYTE.bit.D5 = (data>>3)&0x01;      //(data&0x20)>>5;
+    LCD_BYTE.bit.D4 = (data>>2)&0x01;      //(data&0x10)>>4;
+    LCD_BYTE.bit.D3 = (data>>5)&0x01;      //(data&0x08)>>3;
+    LCD_BYTE.bit.D2 = (data>>4)&0x01;      //(data&0x04)>>2;
+    LCD_BYTE.bit.D1 = (data>>7)&0x01;      //(data&0x02)>>1;
+    LCD_BYTE.bit.D0 = (data>>6)&0x01;      //(data&0x01)>>0;
 
     GPIOD->PDOR &= 0xFFFF00FF;
-    // GPIOD->PDOR |= (LCD_BYTE.DATA<<8);
-    GPIOD->PDOR |= ((uint16_t)data)<<8;
+    GPIOD->PDOR |= (uint32_t)(LCD_BYTE.DATA<<8);
     
-    GPIO_WritePinOutput(GPIOC, 18U, 0);
-    GPIO_WritePinOutput(GPIOC, 18U, 1);
-    GPIO_WritePinOutput(GPIOD,  4U, 1);
+    GPIO_WritePinOutput(GPIOC, 18U, 0);    // WR ~ C18
+    GPIO_WritePinOutput(GPIOC, 18U, 1);    // WR ~ C18
+    GPIO_WritePinOutput(GPIOD,  4U, 1);    // CS ~ D4
 #endif
 }
 
@@ -69,26 +68,25 @@ void LCD_Write_CMD(uint8_t cmd)
     LCD_WR_OUT = 1;     // 写使能
     LCD_CS_OUT = 1;     // 片选禁能
 #else
-    GPIO_WritePinOutput(GPIOC, 12U, 1);
-    GPIO_WritePinOutput(GPIOC, 19U, 0);
-    GPIO_WritePinOutput(GPIOD,  4U, 0);
+    GPIO_WritePinOutput(GPIOC, 12U, 1);    // RD ~ C12
+    GPIO_WritePinOutput(GPIOC, 19U, 0);    // RS ~ RS
+    GPIO_WritePinOutput(GPIOD,  4U, 0);    // CS ~ D4
     
-    // LCD_BYTE.bit.D7 = (cmd&0x80)>>7;
-    // LCD_BYTE.bit.D6 = (cmd&0x40)>>6;
-    // LCD_BYTE.bit.D5 = (cmd&0x20)>>5;
-    // LCD_BYTE.bit.D4 = (cmd&0x10)>>4;
-    // LCD_BYTE.bit.D3 = (cmd&0x08)>>3;
-    // LCD_BYTE.bit.D2 = (cmd&0x04)>>2;
-    // LCD_BYTE.bit.D1 = (cmd&0x02)>>1;
-    // LCD_BYTE.bit.D0 = (cmd&0x01)>>0;
+    LCD_BYTE.bit.D7 = (cmd>>1)&0x01;      //(cmd&0x80)>>7;
+    LCD_BYTE.bit.D6 = (cmd>>0)&0x01;      //(cmd&0x40)>>6;
+    LCD_BYTE.bit.D5 = (cmd>>3)&0x01;      //(cmd&0x20)>>5;
+    LCD_BYTE.bit.D4 = (cmd>>2)&0x01;      //(cmd&0x10)>>4;
+    LCD_BYTE.bit.D3 = (cmd>>5)&0x01;      //(cmd&0x08)>>3;
+    LCD_BYTE.bit.D2 = (cmd>>4)&0x01;      //(cmd&0x04)>>2;
+    LCD_BYTE.bit.D1 = (cmd>>7)&0x01;      //(cmd&0x02)>>1;
+    LCD_BYTE.bit.D0 = (cmd>>6)&0x01;      //(cmd&0x01)>>0;
 
     GPIOD->PDOR &= 0xFFFF00FF;
-    // GPIOD->PDOR |= (LCD_BYTE.DATA<<8);
-    GPIOD->PDOR |= ((uint16_t)cmd)<<8;
+    GPIOD->PDOR |= (uint32_t)(LCD_BYTE.DATA<<8);
     
-    GPIO_WritePinOutput(GPIOC, 18U, 0);
-    GPIO_WritePinOutput(GPIOC, 18U, 1);
-    GPIO_WritePinOutput(GPIOD,  4U, 1);
+    GPIO_WritePinOutput(GPIOC, 18U, 0);    // WR ~ C18
+    GPIO_WritePinOutput(GPIOC, 18U, 1);    // WR ~ C18
+    GPIO_WritePinOutput(GPIOD,  4U, 1);    // CS ~ D4
 #endif
 }
 
@@ -292,7 +290,7 @@ void LCD_Init(void)
     
     LCD_Dir(LCD_DIR_LEFT);
     
-    LCD_Clear(0x0000);          // 清屏成黑色
+    LCD_Clear(BLACK);          // 清屏成黑色
 }
 
 void LCD_PTLON(Point_t site, Size_t size)
