@@ -34,7 +34,7 @@
 bool MT9V034_CaptureAccomplished = false;
 volatile uint8_t MT9V034_IMGBUFF[MT9V034_SIZE];
 
-void PORTA_IRQHandler(void)
+__ramfunc void PORTA_IRQHandler(void)
 {
     //volatile uint32_t ISFR_FLAG = PORTA->ISFR;
     //PORTA->ISFR = 0x00000000;
@@ -42,12 +42,12 @@ void PORTA_IRQHandler(void)
     MT9V034_FrameValid_Callback(PORTA->ISFR);
 }
 
-void DMA0_DMA16_IRQHandler(void)
+__ramfunc void DMA0_DMA16_IRQHandler(void)
 {
     MT9V034_DMA_Callback();
 }
 
-uint32_t main(void)
+__ramfunc uint32_t main(void)
 {
   Init_ALL();
   
@@ -58,31 +58,26 @@ uint32_t main(void)
   if(GPIOA->PDIR&(1U<<14U))         //DKEY3������
   {
       SIM->CLKDIV1 = 0x01340000U;
+      
+      SystemBusClock   = (SystemCoreClock / (0x01U + ((SIM->CLKDIV1 & SIM_CLKDIV1_OUTDIV4_MASK) >> SIM_CLKDIV1_OUTDIV4_SHIFT)));
+      SystemFlashClock = (SystemCoreClock / (0x01U + ((SIM->CLKDIV1 & SIM_CLKDIV1_OUTDIV4_MASK) >> SIM_CLKDIV1_OUTDIV4_SHIFT)));
   }
   else
   {
       SIM->CLKDIV1 = 0x01390000U;
   }
   
-  //LCD_Init();
-  //LCD_Clear(BLACK);
-  //LCD_String((Point_t){60, 60}, "Hello", WHITE, BLACK);
+  LCD_Init();
+  LCD_String((Point_t){20, 100}, "InitComplete", RED, GRAY);
   
-  //GPIO_WritePinOutput(GPIOC, 0U, 0U);
   GPIOC->PCOR |= (1U<<0U);
-  
-  //UpperCOM_PutBuff("Hello World!\r\n", sizeof("Hello World!\r\n"));
-  
+ 
   for(;;)
   {
       if(MT9V034_CaptureAccomplished)
       {
-          DisableIRQ(PORTA_IRQn);
-          UpperCOM_SendImg(MT9V034_IMGBUFF, sizeof(MT9V034_IMGBUFF));
-          EnableIRQ(PORTA_IRQn);
+          LCD_Img_Gray_ZOOM((Point_t){1, 1}, (Size_t){126, 95}, (uint8_t*)MT9V034_IMGBUFF, (Size_t){MT9V034_W, MT9V034_H});
       }
-      
-      
   }
 }
 

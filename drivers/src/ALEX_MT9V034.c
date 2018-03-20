@@ -5,40 +5,29 @@ extern volatile uint8_t MT9V034_IMGBUFF[MT9V034_SIZE];
 
 void MT9V034_WriteReg(uint8_t SlaveAddr, uint8_t RegAddr, uint16_t RegVal)
 {
-    SCCB_UnlockI2C();
-    
+    //SCCB_UnlockI2C();
     MT9V034_writereg_start:
-    
-    SCCB_WriteByte_soft(SlaveAddr, RegAddr, (uint8_t)(RegVal>>8));
-    SCCB_WriteByte_soft(SlaveAddr, 0xF0, (uint8_t)RegVal&0x00FF);
+    SCCB_Start();
+    SCCB_WriteByte_soft(SlaveAddr, RegAddr, RegVal);
     SCCB_Stop();
-    
-    MT9V034_Delay(2);
+    MT9V034_DelayMs(2);
     
     if((RegAddr !=  MT9V034_RESET) && (RegVal != MT9V034_ReadReg(SlaveAddr, RegAddr)))
     {
         goto MT9V034_writereg_start;
     }
     
-    MT9V034_Delay(20);
-    
+    MT9V034_DelayMs(2);
     return;
 }
 
 uint16_t MT9V034_ReadReg(uint8_t SlaveAddr, uint8_t RegAddr)
 {
-    uint16_t val[2] = {0, 0};
-    
-    SCCB_UnlockI2C();
-
-    val[0] = SCCB_ReadByte_soft(SlaveAddr, RegAddr);
-    val[1] = SCCB_ReadByte_soft(SlaveAddr, 0xF0);
-    
+    uint16_t val;
+    val = SCCB_ReadByte_soft(SlaveAddr, RegAddr);
     SCCB_Stop();
-    
-    MT9V034_Delay(2);
-    
-    return (uint16_t)((val[0]<<8)|val[1]);
+    MT9V034_DelayMs(2);
+    return val;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -53,7 +42,7 @@ void MT9V034_DMA_Init(uint8_t* pMT9V032_IMG_Buff)
     DMA0_Transer_config.destOffset       = 0x01U;                               // 数据源指向地址每次自增1 byte
     DMA0_Transer_config.destTransferSize = kEDMA_TransferSize1Bytes;            // DMA每次传输1byte
     DMA0_Transer_config.srcTransferSize  = kEDMA_TransferSize1Bytes;            // DMA每次传输1byte
-    DMA0_Transer_config.majorLoopCounts  = MT9V034_MAX_WIDTH;                      // VSYNC触发DMA一次Major loop采集CAMERA_DMA_NUM (bytes)的数据
+    DMA0_Transer_config.majorLoopCounts  = MT9V034_W;                           // HSYNC触发DMA一次Major loop采集MT9V034_W (bytes)的数据
     DMA0_Transer_config.minorLoopBytes   = 0x01U;
     
     EDMA_ResetChannel(DMA0, MT9V034_DMA_CHANNEL);                                         // 复位DMACH0
@@ -71,9 +60,9 @@ void MT9V034_DMA_Init(uint8_t* pMT9V032_IMG_Buff)
     
     EDMA_ClearChannelStatusFlags(DMA0, MT9V034_DMA_CHANNEL, kEDMA_InterruptFlag);
     
-    PORT_SetPinInterruptConfig(PORTA, 24U, kPORT_DMARisingEdge);          // PTA24 ~ PCLK.  信号下降沿触发DMA传输
+    PORT_SetPinInterruptConfig(PORTA, 24U, kPORT_DMAFallingEdge);          // PTA24 ~ PCLK.  信号下降沿触发DMA传输
     PORT_SetPinInterruptConfig(PORTA, 25U, kPORT_InterruptRisingEdge);     // PTA25 ~ VSYNC. 信号上升沿触发CPU中断
-    PORT_SetPinInterruptConfig(PORTA, 26U, kPORT_InterruptRisingEdge);     // PTA26 ~ HREF.  信号上升沿触发CPU中断
+    PORT_SetPinInterruptConfig(PORTA, 26U, kPORT_InterruptFallingEdge);     // PTA26 ~ HREF.  信号上升沿触发CPU中断
     
     EnableIRQ(MT9V034_DMA_CHANNEL);
     EnableIRQ(PORTA_IRQn);
@@ -89,13 +78,43 @@ bool MT9V034_Reg_Init(uint8_t MT9V034_I2C_ADDR)
     
     MT9V034_Reset(MT9V034_I2C_ADDR);
     
-    MT9V034_SetReservedReg(MT9V034_I2C_ADDR);
+    //MT9V034_SetReservedReg(MT9V034_I2C_ADDR);
     MT9V034_SetFrameResolution(MT9V034_I2C_ADDR, MT9V034_W, MT9V034_H);
     
     MT9V034_SetAutoExposure(MT9V034_I2C_ADDR, true);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0xAC, 0x0001);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0xAD, 0x01E0);
     
-    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0xC6, 0x00);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x2C, 0x0004);
+    
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x7F, 0x3000);           // test pattern
+    
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, MT9V034_ANALOG_CTRL, MT9V034_ANTI_ECLIPSE_ENABLE);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0F, 0x0000);
 
+    
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x08, 0x01BB);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x09, 0x01D9);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0xA5, 0x003A);
+    
+    //100dB HDR:
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x08, 0x03D4);
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x09, 0x03E7);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0A, 0x0064);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0B, 0x03E8);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0F, 0x0103);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x35, 0x8010);
+    
+    //80dB HDR
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x08, 0x03CA);
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x09, 0x03DE);
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0A, 0x0064);
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0B, 0x03E8);
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x0F, 0x0103);
+    //MT9V034_WriteReg(MT9V034_I2C_ADDR, 0x35, 0x8010);
+    
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, 0xA5, 0x0030);
+    
     return true;
 }
 
@@ -115,14 +134,14 @@ void MT9V034_Reset(uint8_t MT9V034_I2C_ADDR)
 {
     //Reset MT9V034, but register config will not change.
     MT9V034_WriteReg(MT9V034_I2C_ADDR, MT9V034_RESET, 0x0001);
-    MT9V034_Delay(10);
+    MT9V034_DelayMs(10);
     
     //Unlock MT9V034, allowing user to initiate register settings and readout
-    MT9V034_WriteReg(MT9V034_I2C_ADDR, MT9V034_CHIP_CONTROL, 0x0088);
+    MT9V034_WriteReg(MT9V034_I2C_ADDR, MT9V034_CHIP_CONTROL, 0x0188);
         
     //Reset Again.
     MT9V034_WriteReg(MT9V034_I2C_ADDR, MT9V034_RESET, 0x0001);
-    MT9V034_Delay(10);
+    MT9V034_DelayMs(10);
 }
 
 void MT9V034_SetReservedReg(uint8_t MT9V034_I2C_ADDR)
@@ -159,7 +178,7 @@ void MT9V034_SetFrameResolution(uint8_t MT9V034_I2C_ADDR, uint16_t width, uint16
         data |= MT9V034_READ_MODE_COL_BIN_2;
     }
 
-    data |= (MT9V034_READ_MODE_ROW_FLIP);       //LQ-MT9V034 needs vertical mirror to capture correct image
+    data |= (MT9V034_READ_MODE_ROW_FLIP|MT9V034_READ_MODE_COL_FLIP);       //LQ-MT9V034 needs vertical mirror to capture correct image
     
     MT9V034_WriteReg(MT9V034_I2C_ADDR, MT9V034_READ_MODE, data);
 
@@ -193,6 +212,7 @@ __ramfunc void MT9V034_FrameValid_Callback(uint32_t ISFR_FLAG)
     {
         PORTA->ISFR |= (1U<<25U);
         MT9V034_CaptureAccomplished = false;
+        PORTA->PCR[26U] = (PORTA->PCR[26U] & ~PORT_PCR_IRQC_MASK) | PORT_PCR_IRQC(kPORT_InterruptRisingEdge);
         return;
     }
    
@@ -202,10 +222,11 @@ __ramfunc void MT9V034_FrameValid_Callback(uint32_t ISFR_FLAG)
         
         PORTA->ISFR |= (1U<<26U);
         
-        if(line == MT9V034_H-1)
+        if(line == MT9V034_H)
         {
             line = 0;
             MT9V034_CaptureAccomplished = true;
+            PORTA->PCR[26U] = (PORTA->PCR[26U] & ~PORT_PCR_IRQC_MASK) | PORT_PCR_IRQC(kPORT_InterruptOrDMADisabled);
         }
     }
 }
@@ -220,3 +241,9 @@ __ramfunc void MT9V034_DMA_Callback(void)
 {
     DMA0->INT |= DMA_INT_INT0(1);
 }
+
+///////////////////////////////////////////////////////////////////////////////
+
+uint8_t regTable[][3] = {
+    {{0x00},{0x00}, {0x00}},
+};

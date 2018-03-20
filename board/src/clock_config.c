@@ -141,6 +141,29 @@ const mcg_config_t mcgConfig_BOARD_BootClockRUN =
                 .vdiv = 44-16,                     /* VCO divider: multiplied by 44 */
             },
     };
+
+const mcg_config_t mcg_config_FEE= {
+    .mcgMode = kMCG_ModeFEE,
+    .irclkEnableMode = 1,
+    .ircs = kMCG_IrcSlow,
+    .frdiv = 0x03,                        //对应256分频
+    .drs = kMCG_DrsHigh,
+    .dmx32 = kMCG_Dmx32Fine,
+    //.oscsel = kMCG_OscselOsc,
+    .pll0Config =
+    {
+        .enableMode = MCG_PLL_DISABLE,    /* MCGPLLCLK disabled */
+        .prdiv = 2+1,                    /* PLL Reference divider: divided by 4 */
+        .vdiv = 44-16,                     /* VCO divider: multiplied by 44 */
+    },
+};
+
+const sim_clock_config_t sim_config_FEE= {
+    .pllFllSel = 0U,
+    .er32kSrc = 2U,
+    .clkdiv1 = 0x01230000U,             //设置bus clock/core clock/flash clock分频
+};
+
 const sim_clock_config_t simConfig_BOARD_BootClockRUN =
     {
         .pllFllSel = SIM_PLLFLLSEL_MCGFLLCLK_CLK, /* PLLFLL select: MCGFLLCLK clock */
@@ -164,16 +187,24 @@ const osc_config_t oscConfig_BOARD_BootClockRUN =
  ******************************************************************************/
 void BOARD_BootClockRUN(void)
 {
-    /* Set the clock configuration in SIM module. */
-    CLOCK_SetSimConfig(&simConfig_BOARD_BootClockRUN);
-    
     /* Set the system clock dividers in SIM to safe value. */
     CLOCK_CONFIG_SetSimSafeDivs();
+    
     /* Initializes OSC0 according to board configuration. */
     CLOCK_InitOsc0(&oscConfig_BOARD_BootClockRUN);
     CLOCK_SetXtal0Freq(oscConfig_BOARD_BootClockRUN.freq);
+    
+    /*
+    CLOCK_SetMcgConfig(&mcg_config_FEE);  // Step 2: 配置MCG选择时钟模式；
+    CLOCK_SetSimConfig(&sim_config_FEE);  // Step 3: 配置SIM，设置时钟分频比；
+    */
+
     /* Configure FLL external reference divider (FRDIV). */
     CLOCK_CONFIG_SetFllExtRefDiv(mcgConfig_BOARD_BootClockRUN.frdiv);
+    
+    /* Set the clock configuration in SIM module. */
+    CLOCK_SetSimConfig(&simConfig_BOARD_BootClockRUN);
+    
     /* Set MCG to PEE mode. */
     CLOCK_BootToPeeMode(kMCG_OscselOsc,
                         kMCG_PllClkSelPll0,

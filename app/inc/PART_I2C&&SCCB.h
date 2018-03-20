@@ -16,7 +16,7 @@
 #define SDA_DDR_OUT()   do{GPIOE->PDDR&=(uint32_t)~(1U<<10U);GPIOE->PDDR|=(uint32_t)(1U<<10U);}while(0)
 #define SDA_DDR_IN()    do{GPIOE->PDDR&=(uint32_t)~(1U<<10U);}while(0)
 
-#define SCCB_DELAY()    ALEX_CPU_Delay(6000)
+#define SCCB_DELAY()    ALEX_CPU_Delay(8000)
 
 // #define SCCB_WriteByte(base, SlaveAddress, REG_Address, REG_data) I2C_WriteByte(base, SlaveAddress, REG_Address, REG_data)
 extern void I2C_WriteByte(I2C_Type *base, uint8_t SlaveAddress, uint8_t REG_Address,unsigned char REG_data);
@@ -24,7 +24,7 @@ extern uint8_t I2C_ReadByte(I2C_Type *base, uint8_t SlaveAddress, uint8_t REG_Ad
 extern void SCCB_UnlockI2C();
 // extern uint8_t SCCB_ReadByte(I2C_Type *base, uint8_t SlaveAddress, uint8_t REG_Address);
 
-extern int16_t SCCB_WriteByte_soft(uint8_t SlaveAddress, uint8_t REG_Address, uint8_t REG_data);
+extern int16_t SCCB_WriteByte_soft(uint8_t SlaveAddress, uint8_t REG_Address, uint16_t REG_data);
 extern int16_t SCCB_ReadByte_soft(uint8_t SlaveAddress, uint8_t REG_Address);
 
 #endif

@@ -9,11 +9,13 @@
 #define MT9V034_SIZE                    (MT9V034_H*MT9V034_W)
 #define MT9V034_DMA_CHANNEL             (DMA0_DMA16_IRQn)
 
-#define MT9V034_Delay(ms)    ALEX_lptmr_DelayMs(ms)
+#define MT9V034_Delay(n)     ALEX_CPU_Delay(n) 
+#define MT9V034_DelayMs(ms)    ALEX_lptmr_DelayMs(ms)
 ///////////////////////////////////////////////////////////
-extern int16_t SCCB_WriteByte_soft(uint8_t SlaveAddress, uint8_t REG_Address, uint8_t REG_data);
-extern int16_t SCCB_ReadByte_soft(uint8_t SlaveAddress, uint8_t REG_Address);
+extern void SCCB_Start(void);
 extern void SCCB_Stop(void);
+extern int16_t SCCB_WriteByte_soft(uint8_t SlaveAddress, uint8_t REG_Address, uint16_t REG_data);
+extern int16_t SCCB_ReadByte_soft(uint8_t SlaveAddress, uint8_t REG_Address);
 ///////////////////////////////////////////////////////////
 extern void MT9V034_WriteReg(uint8_t SlaveAddr, uint8_t RegAddr, uint16_t RegVal);
 extern uint16_t MT9V034_ReadReg(uint8_t SlaveAddr, uint8_t RegAddr);

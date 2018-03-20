@@ -88,14 +88,14 @@ typedef union
 {
     struct
     {
-        uint8_t D6:1;   // PTD 8
-        uint8_t D7:1;   // PTD 9
-        uint8_t D4:1;   // PTD10
-        uint8_t D5:1;   // PTD11
-        uint8_t D2:1;   // PTD12
-        uint8_t D3:1;   // PTD13
-        uint8_t D0:1;   // PTD14
-        uint8_t D1:1;   // PTD15
+        uint8_t D0:1;//D6:1;   // PTD 8
+        uint8_t D1:1;//D7:1;   // PTD 9
+        uint8_t D2:1;//D4:1;   // PTD10
+        uint8_t D3:1;//D5:1;   // PTD11
+        uint8_t D4:1;//D2:1;   // PTD12
+        uint8_t D5:1;//D3:1;   // PTD13
+        uint8_t D6:1;//D0:1;   // PTD14
+        uint8_t D7:1;//D1:1;   // PTD15
     }bit;
     uint8_t DATA;
 }LCD_Data;

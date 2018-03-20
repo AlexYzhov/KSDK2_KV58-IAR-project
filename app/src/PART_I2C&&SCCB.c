@@ -35,51 +35,31 @@ uint8_t I2C_ReadByte(I2C_Type *base, uint8_t SlaveAddress, uint8_t REG_Address)
  *  @brief      SCCB起始信号
  *  @since      v5.0
  */
-static uint8_t SCCB_Start(void)
+void SCCB_Start(void)
 {
-    SDA_DDR_OUT();
-
+  
+    SCL_L();
     SDA_H();
+    SCCB_DELAY();
     SCL_H();
     SCCB_DELAY();
-
-    //确认SDA进入高电平
-    SDA_DDR_IN();
-    if(!SDA_IN())
-    {
-        SDA_DDR_OUT();
-        return 0;   /* SDA线为低电平则总线忙,退出 */
-    }
-    SDA_DDR_OUT();
-
     SDA_L();
     SCCB_DELAY();
     SCL_L();
-
-    //确认SDA进入低电平
-    if(SDA_IN())
-    {
-        SDA_DDR_OUT();
-        return 0;   /* SDA线为高电平则总线出错,退出 */
-    }
-    
-    return 1;
+    SCCB_DELAY();
 }
 
-/*!
- *  @brief      SCCB停止信号
- *  @since      v5.0
- */
 void SCCB_Stop(void)
 {
-    SDA_DDR_OUT();
-
     SCL_L();
+    //SCCB_DELAY();
     SDA_L();
     SCCB_DELAY();
     SCL_H();
     SCCB_DELAY();
     SDA_H();
+    SCCB_DELAY();
+    SCL_L();
     SCCB_DELAY();
 }
 
@@ -87,7 +67,6 @@ void SCCB_Stop(void)
  *  @brief      SCCB应答信号
  *  @since      v5.0
  */
-/*
 static void SCCB_Ack(void)
 {
     SCL_L();
@@ -99,7 +78,6 @@ static void SCCB_Ack(void)
     SCL_L();
     SCCB_DELAY();
 }
-*/
 
 /*!
  *  @brief      SCCB无应答信号
@@ -114,6 +92,7 @@ static void SCCB_NoAck(void)
     SCL_H();
     SCCB_DELAY();
     SCL_L();
+    SCCB_DELAY();
 }
 
 /*!
@@ -121,26 +100,26 @@ static void SCCB_NoAck(void)
  *  @return     应答结果（0表示无应答，1表示有应答）
  *  @since      v5.0
  */
-static int SCCB_WaitAck(void)
+int SCCB_WaitAck(void)
 {
-    SDA_DDR_IN();
-    SCCB_DELAY();
-
-    //SCL_H();
+    SCL_L();
     //SDA_H();
+    SDA_DDR_IN();
 
     SCL_H();
+
     SCCB_DELAY();
 
     if(SDA_IN())           //应答为高电平，异常，通信失败
     {
-        SDA_DDR_OUT();
         SCL_L();
+        SCCB_DELAY();
+        SDA_DDR_OUT();
         return 0;
     }
-    SDA_DDR_OUT();
-    
     SCL_L();
+    SCCB_DELAY();
+    SDA_DDR_OUT();
     return 1;
 }
 
@@ -149,9 +128,11 @@ static int SCCB_WaitAck(void)
  *  @param      SendByte    需要发送的数据
  *  @since      v5.0
  */
-static void SCCB_SendByte(uint8_t SendByte)
+void SCCB_SendByte(uint8_t SendByte)
 {
     uint8_t i = 8;
+    SCL_L();
+    SCCB_DELAY();
     while(i--)
     {
 
@@ -167,7 +148,9 @@ static void SCCB_SendByte(uint8_t SendByte)
         SCCB_DELAY();
         SCL_H();                //SCL 拉高，采集信号
         SCCB_DELAY();
-        SCL_L();                //SCL 时钟线拉低
+        SCL_L();
+        SCCB_DELAY();
+        //SCL 时钟线拉低
         //SCCB_DELAY();
     }
     //SCL_L();
@@ -178,7 +161,7 @@ static void SCCB_SendByte(uint8_t SendByte)
  *  @return     接收到的数据
  *  @since      v5.0
  */
-static int SCCB_ReceiveByte(void)
+int SCCB_ReceiveByte(void)
 {
     uint8_t i = 8;
     uint8_t ReceiveByte = 0;
@@ -200,8 +183,9 @@ static int SCCB_ReceiveByte(void)
             ReceiveByte |= 0x01;
         }
     }
-    SDA_DDR_OUT();
     SCL_L();
+    SCCB_DELAY();
+    SDA_DDR_OUT();
     return ReceiveByte;
 }
 
@@ -225,92 +209,50 @@ void SCCB_UnlockI2C()
     SCCB_DELAY();
 }
 
-int16_t SCCB_WriteByte_soft(uint8_t SlaveAddress, uint8_t REG_Address, uint8_t REG_data)
+int16_t SCCB_WriteByte_soft(uint8_t SlaveAddress, uint8_t REG_Address, uint16_t REG_data)
 {
-    sccb_write_start:
-  
-    if(!SCCB_Start())
-    {
-        goto sccb_write_start;
-    }
-    SCCB_SendByte(SlaveAddress<<1|0);                    /* 器件地址 */
+    SCCB_SendByte( SlaveAddress<<1|0 );                    /* 器件地址 */
     if(!SCCB_WaitAck())
     {
         SCCB_Stop();
-        goto sccb_write_start;
+        return 0;
     }
-    
     SCCB_SendByte(REG_Address);   /* 设置低起始地址 */
-    if(!SCCB_WaitAck())
-    {
-        SCCB_Stop();
-        goto sccb_write_start;
-    }
-
-    SCCB_SendByte(REG_data);
-    if(!SCCB_WaitAck())
-    {
-        SCCB_Stop();
-        goto sccb_write_start;
-    }
-    
-    //SCCB_Stop();
+    SCCB_WaitAck();
+    SCCB_SendByte((uint8_t)(REG_data>>8));
+    SCCB_WaitAck();
+    SCCB_SendByte((uint8_t)REG_data&0x00FF);
+    SCCB_WaitAck();
     return 1;
 }
 
-int16_t SCCB_ReadByte_soft(uint8_t SlaveAddress, uint8_t REG_Address)
-{  
-    uint8_t pBuffer = 0;
 
-    sccb_read_start:
-      
-    if(!SCCB_Start())
-    {
-        goto sccb_read_start;
-    }
+int16_t SCCB_ReadByte_soft(uint8_t SlaveAddress, uint8_t REG_Address)
+{
+    uint16_t pBuffer = 0;
+    SCCB_Start();
     SCCB_SendByte(SlaveAddress<<1|0);         /* 器件地址 */
     if(!SCCB_WaitAck())
     {
         SCCB_Stop();
-        goto sccb_read_start;
+        return -1;
     }
-
     SCCB_SendByte(REG_Address);           /* 设置低起始地址 */
-    if(!SCCB_WaitAck())
-    {
-        SCCB_Stop();
-        goto sccb_read_start;
-    }
-    
-    //SCCB_Stop();
-
-    if(!SCCB_Start())
-    {
-        goto sccb_read_start;
-    }
+    SCCB_WaitAck();
+    SCCB_DELAY();
+    SCCB_Start();
     SCCB_SendByte(SlaveAddress<<1|1);               /* 器件地址 */
+
     if(!SCCB_WaitAck())
     {
         SCCB_Stop();
-        goto sccb_read_start;
+        return -3;
     }
-
-    // while(length)
-    // {
-    //     *pBuffer = SCCB_ReceiveByte();
-    //     if(length == 1)
-    //     {
-    //         SCCB_NoAck();
-    //     }
-    //     else
-    //     {
-    //         SCCB_Ack();
-    //     }
-    //     pBuffer++;
-    //     length--;
-    // }
     
     pBuffer = SCCB_ReceiveByte();       // 只读一个数据
+    SCCB_Ack();
+    pBuffer <<= 8;
+    pBuffer |=SCCB_ReceiveByte();
     SCCB_NoAck();
     
     return pBuffer;

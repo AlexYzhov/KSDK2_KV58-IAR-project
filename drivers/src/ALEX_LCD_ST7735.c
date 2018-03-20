@@ -2,7 +2,7 @@
 
 LCD_Data LCD_BYTE;
 
-void LCD_Write_Data(uint8_t data)
+__ramfunc void LCD_Write_Data(uint8_t data)
 {
 #ifdef CPU_MK66FX1M0VLQ18   // Cortex M4支持BITBAND_REG
     LCD_RD_OUT = 1;
@@ -24,9 +24,12 @@ void LCD_Write_Data(uint8_t data)
     LCD_WR_OUT = 1;
     LCD_CS_OUT = 1;
 #else                       // Cortex M7不支持BITBAND_REG
-    GPIO_WritePinOutput(GPIOC, 12U, 1);    // RD ~ C12
-    GPIO_WritePinOutput(GPIOC, 19U, 1);    // RS ~ RS
-    GPIO_WritePinOutput(GPIOD,  4U, 0);    // CS ~ D4
+    //GPIO_WritePinOutput(GPIOC, 12U, 1);    // RD ~ C12
+    //GPIO_WritePinOutput(GPIOC, 19U, 1);    // RS ~ RS
+    //GPIO_WritePinOutput(GPIOD,  4U, 0);    // CS ~ D4
+    GPIOC->PSOR |= (1U<<12U);
+    GPIOC->PSOR |= (1U<<19U);
+    GPIOD->PCOR |= (1U<<4U);
     
     LCD_BYTE.bit.D7 = (data>>1)&0x01;      //(data&0x80)>>7;
     LCD_BYTE.bit.D6 = (data>>0)&0x01;      //(data&0x40)>>6;
@@ -40,13 +43,17 @@ void LCD_Write_Data(uint8_t data)
     GPIOD->PDOR &= 0xFFFF00FF;
     GPIOD->PDOR |= (uint32_t)(LCD_BYTE.DATA<<8);
     
-    GPIO_WritePinOutput(GPIOC, 18U, 0);    // WR ~ C18
-    GPIO_WritePinOutput(GPIOC, 18U, 1);    // WR ~ C18
-    GPIO_WritePinOutput(GPIOD,  4U, 1);    // CS ~ D4
+    //GPIO_WritePinOutput(GPIOC, 18U, 0);    // WR ~ C18
+    //GPIO_WritePinOutput(GPIOC, 18U, 1);    // WR ~ C18
+    //GPIO_WritePinOutput(GPIOD,  4U, 1);    // CS ~ D4
+    
+    GPIOC->PCOR |= (1U<<18U);
+    GPIOC->PSOR |= (1U<<18U);
+    GPIOD->PSOR |= (1U<<4U);
 #endif
 }
 
-void LCD_Write_CMD(uint8_t cmd)
+__ramfunc void LCD_Write_CMD(uint8_t cmd)
 {
 #ifdef CPU_MK66FX1M0VLQ18
     LCD_RD_OUT = 1;     // 读禁能
@@ -68,9 +75,13 @@ void LCD_Write_CMD(uint8_t cmd)
     LCD_WR_OUT = 1;     // 写使能
     LCD_CS_OUT = 1;     // 片选禁能
 #else
-    GPIO_WritePinOutput(GPIOC, 12U, 1);    // RD ~ C12
-    GPIO_WritePinOutput(GPIOC, 19U, 0);    // RS ~ RS
-    GPIO_WritePinOutput(GPIOD,  4U, 0);    // CS ~ D4
+    //GPIO_WritePinOutput(GPIOC, 12U, 1);    // RD ~ C12
+    //GPIO_WritePinOutput(GPIOC, 19U, 0);    // RS ~ RS
+    //GPIO_WritePinOutput(GPIOD,  4U, 0);    // CS ~ D4
+    
+    GPIOC->PSOR |= (1U<<12U);
+    GPIOC->PCOR |= (1U<<19U);
+    GPIOD->PCOR |= (1U<<4U);
     
     LCD_BYTE.bit.D7 = (cmd>>1)&0x01;      //(cmd&0x80)>>7;
     LCD_BYTE.bit.D6 = (cmd>>0)&0x01;      //(cmd&0x40)>>6;
@@ -84,9 +95,13 @@ void LCD_Write_CMD(uint8_t cmd)
     GPIOD->PDOR &= 0xFFFF00FF;
     GPIOD->PDOR |= (uint32_t)(LCD_BYTE.DATA<<8);
     
-    GPIO_WritePinOutput(GPIOC, 18U, 0);    // WR ~ C18
-    GPIO_WritePinOutput(GPIOC, 18U, 1);    // WR ~ C18
-    GPIO_WritePinOutput(GPIOD,  4U, 1);    // CS ~ D4
+    //GPIO_WritePinOutput(GPIOC, 18U, 0);    // WR ~ C18
+    //GPIO_WritePinOutput(GPIOC, 18U, 1);    // WR ~ C18
+    //GPIO_WritePinOutput(GPIOD,  4U, 1);    // CS ~ D4
+    
+    GPIOC->PCOR |= (1U<<18U);
+    GPIOC->PSOR |= (1U<<18U);
+    GPIOD->PSOR |= (1U<<4U);
 #endif
 }
 
@@ -290,15 +305,17 @@ void LCD_Init(void)
     
     LCD_Dir(LCD_DIR_LEFT);
     
-    LCD_Clear(BLACK);          // 清屏成黑色
+    LCD_Clear(GRAY);          // 清屏成灰色
 }
 
-void LCD_PTLON(Point_t site, Size_t size)
+__ramfunc void LCD_PTLON(Point_t site, Size_t size)
 {
 
     if(LCD_DIR_LEFT&0x01)
     {
         site.x += 32;     //液晶需要偏移一下，避免四周看不到的行
+        
+        //site.x += 3;     //液晶需要偏移一下，避免四周看不到的行
         //site.y += 2;
     }
     else
@@ -373,7 +390,7 @@ void LCD_ClearTerminal(uint16_t rgb565)
     LCD_DrawRectangle(site, size, rgb565);
 }
 
-void LCD_Img_Gray(Point_t site, Size_t size, uint8_t *img)
+__ramfunc void LCD_Img_Gray(Point_t site, Size_t size, uint8_t *img)
 {
     uint32_t     total = (size.H * size.W);
     uint16_t     imgtemp;
@@ -391,7 +408,7 @@ void LCD_Img_Gray(Point_t site, Size_t size, uint8_t *img)
     }
 }
 
-void LCD_Img_Gray_ZOOM(Point_t site, Size_t size, uint8_t *img, Size_t imgsize)
+__ramfunc void LCD_Img_Gray_ZOOM(Point_t site, Size_t size, uint8_t *img, Size_t imgsize)
 {
 
     uint32_t temp, tempY;
@@ -412,15 +429,7 @@ void LCD_Img_Gray_ZOOM(Point_t site, Size_t size, uint8_t *img, Size_t imgsize)
         {
             X = ( x * imgsize.W  ) / size.W ;
             temp = tempY + X;
-            rgb = GRAY_2_RGB565(pimg[temp]);    
-            if(pimg[temp] == 50)
-            {
-              rgb = 0XF800;              //显示红点
-            }
-            else if(pimg[temp] == 60)
-            {
-              rgb = GRAY;               //显示蓝点
-            }
+            rgb = GRAY_2_RGB565(pimg[temp]);
             LCD_Write_Data(rgb>>8);
             LCD_Write_Data(rgb&0x00FF);
         }

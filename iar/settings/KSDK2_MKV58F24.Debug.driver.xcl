@@ -14,9 +14,7 @@
 
 "--drv_communication=USB0" 
 
-"--drv_interface_speed=auto" 
-
-"--jlink_initial_speed=50" 
+"--drv_interface_speed=50000" 
 
 "--jlink_reset_strategy=0,0" 
 

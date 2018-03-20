@@ -83,6 +83,8 @@
 #define     MT9V034_AEC_ENABLE                          (1<<0)
 #define     MT9V034_AGC_ENABLE                          (1<<1)
 #define MT9V034_THERMAL_INFO                    (0xC1)
+#define MT9V034_ANALOG_CTRL                     (0xC2)
+#define     MT9V034_ANTI_ECLIPSE_ENABLE                 (1<<7)
 
 #define MT9V034_WINDOW_HEIGHT_A                 (0x03)
 #define MT9V034_WINDOW_WIDTH_A                  (0x04)
