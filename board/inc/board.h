@@ -44,6 +44,9 @@ void BOARD_InitLPTMR(void);
 void BOARD_InitGPIO(void);
 void BOARD_InitGPIO_Camera(void);
 void BOARD_InitDMA(void);
+void BOARD_InitXBARA(void);
+void BOARD_InitXBARB(void);
+void BORAD_InitAOI(void);
 
 extern void BOARD_InitALL(void);
 

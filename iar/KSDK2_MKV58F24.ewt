@@ -2452,6 +2452,9 @@
             <file>
                 <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034_REG.h</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_OLED_SSD1351.h</name>
+            </file>
         </group>
         <group>
             <name>src</name>
@@ -2460,6 +2463,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\src\ALEX_OLED_SSD1351.c</name>
             </file>
         </group>
     </group>
@@ -2558,6 +2564,12 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.c</name>

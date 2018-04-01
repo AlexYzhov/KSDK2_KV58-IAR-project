@@ -24,6 +24,9 @@ typedef float float32_t;
 #include "fsl_common.h"
 #include "fsl_clock.h"             // MCG相关驱动，用于配置时钟
 #include "fsl_smc.h"               // 系统模式控制器，用于功耗状态切换
+#include "fsl_xbara.h"             // 交叉矩阵A
+#include "fsl_xbarb.h"             // 交叉矩阵B
+#include "fsl_aoi.h"               //
 #include "fsl_edma.h"              // edma驱动
 #include "fsl_dmamux.h"            // dma mux相关驱动
 #include "fsl_port.h"              // port驱动，用于管脚服用
@@ -57,6 +60,7 @@ typedef float float32_t;
 // #include "ALEX_NRF24L01.h"         // 无线通信
 // #include "ALEX_VL53L0X.h"          // 激光
 #include "ALEX_LCD_ST7735.h"       // 小液晶
+#include "ALEX_OLED_SSD1351.h"
 // #include "VCAN_OV7725_Eagle.h"     // 山外鹰眼(OV7725)
 #include "ALEX_MT9V034.h"
      

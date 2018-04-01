@@ -34,6 +34,8 @@
 bool MT9V034_CaptureAccomplished = false;
 volatile uint8_t MT9V034_IMGBUFF[MT9V034_SIZE];
 
+OLEDn OLED_t;
+
 __ramfunc void PORTA_IRQHandler(void)
 {
     //volatile uint32_t ISFR_FLAG = PORTA->ISFR;
@@ -50,6 +52,9 @@ __ramfunc void DMA0_DMA16_IRQHandler(void)
 __ramfunc uint32_t main(void)
 {
   Init_ALL();
+  
+  //OLED_Init(&OLED_t);
+  //Fill_RAM(&OLED_t, WHITE>>8, WHITE&0xff);
   
   MT9V034_Init();
   

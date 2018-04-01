@@ -6,7 +6,7 @@
 #define Max_Row		0x7f			// 128-1
 #define	Brightness	0x0F
 
-void OLED_WriteByte(OLEDn *OLED, uint8 cmd, uint8 byte) //Write_Command/Write_Data
+void OLED_WriteByte(OLEDn *OLED, uint8_t cmd, uint8_t byte) //Write_Command/Write_Data
 {
     #ifdef _3wirespi
     #elif defined(_4wirespi)
@@ -24,7 +24,7 @@ void OLED_WriteByte(OLEDn *OLED, uint8 cmd, uint8 byte) //Write_Command/Write_Da
     OLED_SCK_H;
     asm("nop");
 
-    for (uint8 i=0; i<8; i++)
+    for (uint8_t i=0; i<8; i++)
     {
         OLED_SCK_L;
         asm("nop");
@@ -46,7 +46,7 @@ void OLED_WriteByte(OLEDn *OLED, uint8 cmd, uint8 byte) //Write_Command/Write_Da
 //-=-=-=-=-=-=-=-=-=-=-=-=//
 //  Instruction Setting   //
 //-=-=-=-=-=-=-=-=-=-=-=-=//
-void Set_Column_Address(OLEDn *OLED, uint8 start, uint8 end)
+void Set_Column_Address(OLEDn *OLED, uint8_t start, uint8_t end)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0x15);			// Set Column Address
 	OLED_WriteByte(OLED, OLED_DATA, start);			// Default => 0x00 (Start Address)
@@ -54,7 +54,7 @@ void Set_Column_Address(OLEDn *OLED, uint8 start, uint8 end)
 }
 
 
-void Set_Row_Address(OLEDn *OLED, uint8 start, uint8 end)
+void Set_Row_Address(OLEDn *OLED, uint8_t start, uint8_t end)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0x75);			// Set Row Address
 	OLED_WriteByte(OLED, OLED_DATA, start);			// Default => 0x00 (Start Address)
@@ -74,7 +74,7 @@ void Set_Read_RAM(OLEDn *OLED)
 }
 
 
-void Set_Remap_Format(OLEDn *OLED, uint8 data)
+void Set_Remap_Format(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xA0);			// Set Re-Map / Color Depth
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x40
@@ -87,21 +87,21 @@ void Set_Remap_Format(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_Start_Line(OLEDn *OLED, uint8 data)
+void Set_Start_Line(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xA1);			// Set Vertical Scroll by RAM
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x00
 }
 
 
-void Set_Display_Offset(OLEDn *OLED, uint8 data)
+void Set_Display_Offset(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xA2);			// Set Vertical Scroll by Row
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x60
 }
 
 
-void Set_Display_Mode(OLEDn *OLED, uint8 data)
+void Set_Display_Mode(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED, OLED_CMD, 0xA4|data);		// Set Display Mode
 						                            // Default => 0xA6
@@ -112,7 +112,7 @@ void Set_Display_Mode(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_Function_Selection(OLEDn *OLED, uint8 data)
+void Set_Function_Selection(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xAB);			// Function Selection
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x01
@@ -121,7 +121,7 @@ void Set_Function_Selection(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_Display_On_Off(OLEDn *OLED, uint8 data)
+void Set_Display_On_Off(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED, OLED_CMD, 0xAE|data);		// Set Display On/Off
 						                            // Default => 0xAE
@@ -130,7 +130,7 @@ void Set_Display_On_Off(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_Phase_Length(OLEDn *OLED, uint8 data)
+void Set_Phase_Length(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xB1);			// Phase 1 (Reset) & Phase 2 (Pre-Charge) Period Adjustment
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x82 (8 Display Clocks [Phase 2] / 5 Display Clocks [Phase 1])
@@ -139,7 +139,7 @@ void Set_Phase_Length(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_Display_Enhancement(OLEDn *OLED, uint8 data)
+void Set_Display_Enhancement(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xB2);			// Display Enhancement
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x00 (Normal)
@@ -148,7 +148,7 @@ void Set_Display_Enhancement(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_Display_Clock(OLEDn *OLED, uint8 data)
+void Set_Display_Clock(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xB3);			// Set Display Clock Divider / Oscillator Frequency
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x00
@@ -157,7 +157,7 @@ void Set_Display_Clock(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_VSL(OLEDn *OLED, uint8 data)
+void Set_VSL(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xB4);			// Set Segment Low Voltage
 	OLED_WriteByte(OLED, OLED_DATA, 0xA0|data);		// Default => 0xA0
@@ -168,35 +168,35 @@ void Set_VSL(OLEDn *OLED, uint8 data)
 }
 
 
-void Set_GPIO(OLEDn *OLED, uint8 data)
+void Set_GPIO(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xB5);			// General Purpose IO
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x0A (GPIO Pins output Low Level.)
 }
 
 
-void Set_Precharge_Period(OLEDn *OLED, uint8 data)
+void Set_Precharge_Period(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xB6);			// Set Second Pre-Charge Period
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x08 (8 Display Clocks)
 }
 
 
-void Set_Precharge_Voltage(OLEDn *OLED, uint8 data)
+void Set_Precharge_Voltage(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xBB);			// Set Pre-Charge Voltage Level
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x17 (0.50*VCC)
 }
 
 
-void Set_VCOMH(OLEDn *OLED, uint8 data)
+void Set_VCOMH(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xBE);			// Set COM Deselect Voltage Level
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x05 (0.82*VCC)
 }
 
 
-void Set_Contrast_Color(OLEDn *OLED, uint8 a, uint8 b, uint8 c)
+void Set_Contrast_Color(OLEDn *OLED, uint8_t a, uint8_t b, uint8_t c)
 {
 	OLED_WriteByte(OLED, OLED_CMD, 0xC1);			// Set Contrast Current for Color A, B, C
 	OLED_WriteByte(OLED, OLED_DATA, a);				// Default => 0x8A (Color A)
@@ -205,21 +205,21 @@ void Set_Contrast_Color(OLEDn *OLED, uint8 a, uint8 b, uint8 c)
 }
 
 
-void Set_Master_Current(OLEDn *OLED, uint8 data)
+void Set_Master_Current(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xC7);			// Master Contrast Current Control
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x0F (Maximum)
 }
 
 
-void Set_Multiplex_Ratio(OLEDn *OLED, uint8 data)
+void Set_Multiplex_Ratio(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED,  OLED_CMD, 0xCA);			// Set Multiplex Ratio
 	OLED_WriteByte(OLED, OLED_DATA, data);			// Default => 0x7F (1/128 Duty)
 }
 
 
-void Set_Command_Lock(OLEDn *OLED, uint8 data)
+void Set_Command_Lock(OLEDn *OLED, uint8_t data)
 {
 	OLED_WriteByte(OLED, 0u, 0xFD);			// Set Command Lock
 	OLED_WriteByte(OLED, 1u, data);			// Default => 0x12
@@ -239,9 +239,9 @@ void Set_Command_Lock(OLEDn *OLED, uint8 data)
 //    a: RRRRRGGG
 //    b: GGGBBBBB
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-void Fill_RAM(OLEDn *OLED, uint8 a, uint8 b)
+void Fill_RAM(OLEDn *OLED, uint8_t a, uint8_t b)
 {
-    uint8 i=0,j=0;
+    uint8_t i=0,j=0;
 
 	Set_Column_Address(OLED, 0x00,0x7F);
 	Set_Row_Address(OLED, 0x00,0x7F);
@@ -268,10 +268,10 @@ void Fill_RAM(OLEDn *OLED, uint8 a, uint8 b)
 //    X: Start X Address
 //    Y: Start Y Address
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-void Show_Font57(OLEDn *OLED, uint8 Character, uint8 MSB_Format, uint8 LSB_Format, uint8 X, uint8 Y)
+void Show_Font57(OLEDn *OLED, uint8_t Character, uint8_t MSB_Format, uint8_t LSB_Format, uint8_t X, uint8_t Y)
 {
-    uint8 i,Font,Pick;
-    uint8 *Src_Pointer = &ASCII_Eng[(Character-' ')][0];
+    uint8_t i,Font,Pick;
+    uint8_t *Src_Pointer = &ASCII_Eng[(Character-' ')][0];
 
 	Set_Remap_Format(OLED, 0x75);
 
@@ -346,9 +346,9 @@ void Show_Font57(OLEDn *OLED, uint8 Character, uint8 MSB_Format, uint8 LSB_Forma
 //    Y: Start Y Address
 //    * Must write "0" in the end...
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-void Show_String(OLEDn *OLED, uint8 *Data_Pointer, uint8 MSB_Format, uint8 LSB_Format, uint8 X, uint8 Y)
+void Show_String(OLEDn *OLED, uint8_t *Data_Pointer, uint8_t MSB_Format, uint8_t LSB_Format, uint8_t X, uint8_t Y)
 {
-    uint8 *Src_Pointer;
+    uint8_t *Src_Pointer;
 
 	Src_Pointer=Data_Pointer;
 	Show_Font57(OLED, 10, MSB_Format,LSB_Format,X,Y);		// No-Break Space

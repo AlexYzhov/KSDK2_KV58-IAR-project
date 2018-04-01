@@ -1,6 +1,7 @@
 "D:\Proj_Kinetis\Library\MKV58F24\drivers\fsl_i2c.c"
 -std=c11
 -ferror-limit=0
+-fbracket-depth=512
 -I
 D:\Proj_Kinetis\iar/../app/
 -I
@@ -49,6 +50,10 @@ D:\Proj_Kinetis\iar/../middleware/Terminal_0.01a/src/
 D:\Proj_Kinetis\iar/../../..
 -I
 D:\Proj_Kinetis\iar/../
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Core\Include
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\DSP\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
@@ -101,6 +106,10 @@ D:\Proj_Kinetis\middleware\Terminal_0.01a\src
 D:
 -I
 D:\Proj_Kinetis
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Core\Include
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\DSP\Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -249,8 +258,8 @@ D:\Proj_Kinetis
 -D__JMP_BUF_ELEMENT_TYPE__=unsigned long long int
 -D__JMP_BUF_NUM_ELEMENTS__=16
 -D__TID__=0xcf60
--D__VER__=8020001
--D__BUILD_NUMBER__=14183
+-D__VER__=8022002
+-D__BUILD_NUMBER__=15995
 -D__IAR_SYSTEMS_ICC__=9
 -D__LITTLE_ENDIAN__=1
 -D__BOOL_TYPE__=unsigned char
@@ -260,8 +269,6 @@ D:\Proj_Kinetis
 -D__WCHAR_T_MAX__=0xffffffffU
 -D__DEF_PTR_MEM__=__data
 -D__DEF_PTR_SIZE__=4
--D__CODE_MEMORY_LIST3__(_P1,_P2)=__CODE_MEM_HELPER3__(__code, 0, _P1, _P2)
--D__DATA_MEMORY_LIST3__(_P1,_P2)=__DATA_MEM_HELPER3__(__data, 0, _P1, _P2)
 -D__DATA_MEM0__=__data
 -D__DATA_MEM0_POINTER_OK__=1
 -D__DATA_MEM0_UNIQUE_POINTER__=1
@@ -277,15 +284,9 @@ D:\Proj_Kinetis
 -D__CODE_MEM0__=__code
 -D__CODE_MEM0_POINTER_OK__=1
 -D__CODE_MEM0_UNIQUE_POINTER__=1
--D__CODE_PTR_MEMORY_LIST3__(_P1,_P2)=__CODE_PTR_MEM_HELPER3__(__code, 0, _P1, _P2)
--D__DATA_PTR_MEMORY_LIST3__(_P1,_P2)=__DATA_PTR_MEM_HELPER3__(__data, 0, _P1, _P2)
--D__VAR_MEMORY_LIST3__(_P1,_P2)=__VAR_MEM_HELPER3__(__data, 0, _P1, _P2)
 -D__HEAP_MEM0__=0
 -D__HEAP_DEFAULT_MEM__=0
--D__HEAP_MEMORY_LIST3__(_P1,_P2)=__HEAP_MEM_HELPER3__(__data, 0, _P1, _P2)
 -D__MULTIPLE_HEAPS__=0
--D__TOPM_DATA_MEMORY_LIST3__(_P1,_P2)=
--D__TOPP_DATA_MEMORY_LIST3__(_P1,_P2)=__TOPP_DATA_MEM_HELPER3__(__data, 0, _P1, _P2)
 -D__DEF_HEAP_MEM__=__data
 -D__PRAGMA_PACK_ON__=1
 -D__MULTIPLE_INHERITANCE__=1
@@ -337,8 +338,8 @@ D:\Proj_Kinetis
 -D__HAS_JOINED_TYPES__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
--D__IAR_COMPILERBASE__=655873
--D__IAR_COMPILERBASE_STR__=10.2.1.194
+-D__IAR_COMPILERBASE__=655878
+-D__IAR_COMPILERBASE_STR__=10.2.6.201
 -D__UNICODE_SOURCE_SUPPORTED__=1
 -D__STDC__=1
 -D__STDC_VERSION__=201112L
@@ -386,38 +387,46 @@ D:\Proj_Kinetis
 -DCPU_MKV58F1M0VLQ24=1
 -DSDK_CORE_ID_CORE0=1
 -DSDK_OS_BAREMETAL=1
+-DARM_MATH_CM7=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
--D__VERSION__="IAR ANSI C/C++ Compiler V8.20.1.14183/W32 for ARM"
+-D__VERSION__="IAR ANSI C/C++ Compiler V8.22.2.15995/W32 for ARM"
 -D__ICCARM_OLD_DEFINED_VAARGS__=1
 -D__VA_STACK_ALIGN__=8
 -D__CODE_MEMORY_LIST1__()=__CODE_MEM_HELPER1__(__code, 0 )
 -D__CODE_MEMORY_LIST2__(_P1)=__CODE_MEM_HELPER2__(__code, 0 ,  _P1 )
--D__CODE_MEMORY_LIST3__(_P1, _P2)=__CODE_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
+-D__CODE_MEMORY_LIST3__(_P1,_P2)=__CODE_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
 -D__DATA_MEMORY_LIST1__()=__DATA_MEM_HELPER1__(__data, 0 )
 -D__DATA_MEMORY_LIST2__(_P1)=__DATA_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__DATA_MEMORY_LIST3__(_P1, _P2)=__DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__DATA_MEMORY_LIST3__(_P1,_P2)=__DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__CODE_PTR_MEMORY_LIST1__()=__CODE_PTR_MEM_HELPER1__(__code, 0 )
 -D__CODE_PTR_MEMORY_LIST2__(_P1)=__CODE_PTR_MEM_HELPER2__(__code, 0 ,  _P1 )
--D__CODE_PTR_MEMORY_LIST3__(_P1, _P2)=__CODE_PTR_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
+-D__CODE_PTR_MEMORY_LIST3__(_P1,_P2)=__CODE_PTR_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
 -D__DATA_PTR_MEMORY_LIST1__()=__DATA_PTR_MEM_HELPER1__(__data, 0 )
 -D__DATA_PTR_MEMORY_LIST2__(_P1)=__DATA_PTR_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__DATA_PTR_MEMORY_LIST3__(_P1, _P2)=__DATA_PTR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__DATA_PTR_MEMORY_LIST3__(_P1,_P2)=__DATA_PTR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__VAR_MEMORY_LIST1__()=__VAR_MEM_HELPER1__(__data, 0 )
 -D__VAR_MEMORY_LIST2__(_P1)=__VAR_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__VAR_MEMORY_LIST3__(_P1, _P2)=__VAR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__VAR_MEMORY_LIST3__(_P1,_P2)=__VAR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__VARD_MEMORY_LIST1__()=__VARD_MEM_HELPER1__(__data, 0, _ )
 -D__HEAP_MEMORY_LIST1__()=__HEAP_MEM_HELPER1__(__data, 0 )
 -D__HEAP_MEMORY_LIST2__(_P1)=__HEAP_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__HEAP_MEMORY_LIST3__(_P1, _P2)=__HEAP_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__HEAP_MEMORY_LIST3__(_P1,_P2)=__HEAP_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__HVAR_MEMORY_LIST1__()=__HVAR_MEM_HELPER1__(__data, 0 )
 -D__HEAPD_MEMORY_LIST1__()=__HEAPD_MEM_HELPER1__(__data, 0, _ )
 -D__HEAPU_MEMORY_LIST1__()=__HEAPU_MEM_HELPER1__(__data, 0 )
 -D__TOPM_DATA_MEMORY_LIST1__()=
 -D__TOPM_DATA_MEMORY_LIST2__(_P1)=
--D__TOPM_DATA_MEMORY_LIST3__(_P1, _P2)=
+-D__TOPM_DATA_MEMORY_LIST3__(_P1,_P2)=
 -D__TOPP_DATA_MEMORY_LIST1__()=__TOPP_DATA_MEM_HELPER1__(__data, 0 )
 -D__TOPP_DATA_MEMORY_LIST2__(_P1)=__TOPP_DATA_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__TOPP_DATA_MEMORY_LIST3__(_P1, _P2)=__TOPP_DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__TOPP_DATA_MEMORY_LIST3__(_P1,_P2)=__TOPP_DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__DATA_MEM0_SIZE_TYPE__=unsigned int
 -D__DATA_MEM0_INDEX_TYPE__=signed int
+-D__iar_fp2bits32(x)=0
+-D__iar_fp2bits64(x)=0
+-D__iar_fpgethi64(x)=0
+-D__iar_atomic_add_fetch(x,y,z)=0
+-D__iar_atomic_sub_fetch(x,y,z)=0
+-D__iar_atomic_load(x,y)=0ULL
+-D__iar_atomic_compare_exchange_weak(a,b,c,d,e)=0

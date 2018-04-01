@@ -16,11 +16,11 @@ extern unsigned char ASCII_Eng[95][5];
 typedef struct OLEDCOLOR
 {
     GPIO_Type *ptx;
-    uint8 SCK;
-    uint8 SDA;
-    uint8 CS;
-    uint8 DC;
-    uint8 RES;
+    uint8_t SCK;
+    uint8_t SDA;
+    uint8_t CS;
+    uint8_t DC;
+    uint8_t RES;
 }OLEDn;
 
 //void OLED_SCK_H(GPIO_Type *ptx, uint8 SCK);
@@ -28,14 +28,14 @@ typedef struct OLEDCOLOR
 //void OLED_SDA_H(GPIO_Type *ptx, uint8 SCK);
 //void OLED_SDA_L(GPIO_Type *ptx, uint8 SCK);
 
-extern void Show_String(OLEDn *OLED, uint8 *Data_Pointer, uint8 MSB_Format, uint8 LSB_Format, uint8 X, uint8 Y);
-extern void Fill_RAM(OLEDn *OLED, uint8 a, uint8 b);
+extern void Show_String(OLEDn *OLED, uint8_t *Data_Pointer, uint8_t MSB_Format, uint8_t LSB_Format, uint8_t X, uint8_t Y);
+extern void Fill_RAM(OLEDn *OLED, uint8_t a, uint8_t b);
 extern void OLED_Init(OLEDn *OLED);
 
-#define OLED_SCK_H PTB10_O=1
-#define OLED_SCK_L PTB10_O=0
-#define OLED_SDA_H PTB11_O=1
-#define OLED_SDA_L PTB11_O=0
+#define OLED_SCK_H GPIOB->PSOR|=(1U<<10U)//PTB10_O=1
+#define OLED_SCK_L GPIOB->PCOR|=(1U<<10U)//PTB10_O=0
+#define OLED_SDA_H GPIOB->PSOR|=(1U<<11U)//PTB11_O=1
+#define OLED_SDA_L GPIOB->PCOR|=(1U<<11U)//PTB11_O=0
 //#define OLED_CS_H PTB2_O=1
 //#define OLED_CS_L PTB2_O=0
 

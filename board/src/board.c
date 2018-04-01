@@ -608,6 +608,54 @@ void BOARD_InitDMA(void)
     EDMA_Init(DMA0, &DMA_config);
 }
 
+void BOARD_InitXBARA(void)
+{
+    XBARA_Init(XBARA);
+    //XBARA_SetSignalsConnection(XBARA, kXBARA_InputXbarIn4, kXBARA_OutputXbOut10);
+    //XBARA_SetSignalsConnection(XBARA, kXBARA_InputXbarIn5, kXBARA_OutputXbOut11);
+    XBARA_SetSignalsConnection(XBARA, kXBARA_InputAndOrInvert0, kXBARA_OutputDmamux18);         // AOI_Event0 ~ DMAMUX18
+}
+
+void BOARD_InitXBARB(void)
+{
+    XBARB_Init(XBARB);
+    XBARB_SetSignalsConnection(XBARB, kXBARB_InputFtm0Match, kXBARB_OutputAoiIn0);      // XB_IN4 ~ XB_OUT0 ~ AOI_IN0
+    XBARB_SetSignalsConnection(XBARB, kXBARB_InputFtm0Extrig, kXBARB_OutputAoiIn1);     // XB_IN5 ~ XB_OUT1 ~ AOI_IN1
+}
+
+void BORAD_InitAOI(void)
+{
+    /*
+     kAOI_LogicZero = 0x0U,      // Forces the input to logical zero
+     kAOI_InputSignal = 0x1U,    // Passes the input signal
+     kAOI_InvInputSignal = 0x2U, // Inverts the input signal
+     kAOI_LogicOne = 0x3U        // Forces the input to logical one
+     */
+    aoi_event_config_t PIXCLK_Event_config;
+    PIXCLK_Event_config.PT0AC = kAOI_InputSignal;
+    PIXCLK_Event_config.PT0BC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT0CC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT0DC = kAOI_LogicOne;
+    
+    PIXCLK_Event_config.PT1AC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT1BC = kAOI_InputSignal;
+    PIXCLK_Event_config.PT1CC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT1DC = kAOI_LogicOne;
+    
+    PIXCLK_Event_config.PT2AC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT2BC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT2CC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT2DC = kAOI_LogicOne;
+    
+    PIXCLK_Event_config.PT3AC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT3BC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT3CC = kAOI_LogicOne;
+    PIXCLK_Event_config.PT3DC = kAOI_LogicOne;
+    
+    AOI_Init(AOI0);
+    AOI_SetEventLogicConfig(AOI0, kAOI_Event0, &PIXCLK_Event_config);
+}
+
 void BOARD_InitALL(void)
 {
     BOARD_InitPins();
@@ -631,6 +679,11 @@ void BOARD_InitALL(void)
     //BOARD_InitLPTMR();
     BOARD_InitGPIO();
     BOARD_InitGPIO_Camera();
+    
+    BOARD_InitXBARA();
+    BOARD_InitXBARB();
+    BORAD_InitAOI();
+    
     BOARD_InitDMA();
     DMAMUX_Init(DMAMUX);
 }

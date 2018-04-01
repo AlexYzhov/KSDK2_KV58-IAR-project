@@ -42,7 +42,8 @@ void MT9V034_DMA_Init(uint8_t* pMT9V032_IMG_Buff)
     DMA0_Transer_config.destOffset       = 0x01U;                               // 数据源指向地址每次自增1 byte
     DMA0_Transer_config.destTransferSize = kEDMA_TransferSize1Bytes;            // DMA每次传输1byte
     DMA0_Transer_config.srcTransferSize  = kEDMA_TransferSize1Bytes;            // DMA每次传输1byte
-    DMA0_Transer_config.majorLoopCounts  = MT9V034_W;                           // HSYNC触发DMA一次Major loop采集MT9V034_W (bytes)的数据
+    DMA0_Transer_config.majorLoopCounts  = MT9V034_SIZE;                        // FV触发DMA一次Major MT9V034_SIZE (bytes)的数据
+    //DMA0_Transer_config.majorLoopCounts  = MT9V034_W;                           // HSYNC触发DMA一次Major loop采集MT9V034_W (bytes)的数据
     DMA0_Transer_config.minorLoopBytes   = 0x01U;
     
     EDMA_ResetChannel(DMA0, MT9V034_DMA_CHANNEL);                                         // 复位DMACH0
@@ -51,18 +52,23 @@ void MT9V034_DMA_Init(uint8_t* pMT9V032_IMG_Buff)
     EDMA_SetBandWidth(DMA0, MT9V034_DMA_CHANNEL, kEDMA_BandwidthStallNone);             // DMA0->CSR, 每读取一次DMA引擎stall 0个周期
     EDMA_EnableAutoStopRequest(DMA0, MT9V034_DMA_CHANNEL, true);                          // DMA0->CSR  主循环结束后自动停止硬件请求
     EDMA_EnableChannelInterrupts(DMA0, MT9V034_DMA_CHANNEL, kEDMA_MajorInterruptEnable);  // DMA0->CSR  主循环结束后产生中断
+    EDMA_EnableChannelRequest(DMA0, MT9V034_DMA_CHANNEL);
     
-    DMAMUX_SetSource(DMAMUX, MT9V034_DMA_CHANNEL, 49);         // 设置DMACH0触发源为PORTA {DMAMUX->CHCFG[0] = src(49)}
+    DMAMUX_SetSource(DMAMUX, MT9V034_DMA_CHANNEL, 18);         // 设置DMACH0触发源为XBARA_OUT0 {DMAMUX->CHCFG[0] = src(49)}
     DMAMUX_EnableChannel(DMAMUX, MT9V034_DMA_CHANNEL);         // 使能DMACH0传输
+    //DMAMUX_SetSource(DMAMUX, MT9V034_DMA_CHANNEL, 49);         // 设置DMACH0触发源为PORTA {DMAMUX->CHCFG[0] = src(49)}
+    //DMAMUX_EnableChannel(DMAMUX, MT9V034_DMA_CHANNEL);         // 使能DMACH0传输
     
     DisableIRQ(MT9V034_DMA_CHANNEL);
     DisableIRQ(PORTA_IRQn);                  // Disable Interrupts according to PORTA
     
     EDMA_ClearChannelStatusFlags(DMA0, MT9V034_DMA_CHANNEL, kEDMA_InterruptFlag);
     
-    PORT_SetPinInterruptConfig(PORTA, 24U, kPORT_DMAFallingEdge);          // PTA24 ~ PCLK.  信号下降沿触发DMA传输
-    PORT_SetPinInterruptConfig(PORTA, 25U, kPORT_InterruptRisingEdge);     // PTA25 ~ VSYNC. 信号上升沿触发CPU中断
-    PORT_SetPinInterruptConfig(PORTA, 26U, kPORT_InterruptFallingEdge);     // PTA26 ~ HREF.  信号上升沿触发CPU中断
+    PORT_SetPinInterruptConfig(PORTA, 24U, kPORT_InterruptOrDMADisabled);    // PTA24 ~ PCLK.  不使能中断或DMA
+    PORT_SetPinInterruptConfig(PORTA, 25U, kPORT_InterruptOrDMADisabled);    // PTA25 ~ HREF.  不使能中断或DMA
+    //PORT_SetPinInterruptConfig(PORTA, 24U, kPORT_DMAFallingEdge);          // PTA24 ~ PCLK.  信号下降沿触发DMA传输
+    //PORT_SetPinInterruptConfig(PORTA, 25U, kPORT_InterruptFallingEdge);    // PTA25 ~ HREF.  信号上升沿触发CPU中断
+    PORT_SetPinInterruptConfig(PORTA, 26U, kPORT_InterruptRisingEdge);     // PTA26 ~ VSYNC. 信号上升沿触发CPU中断
     
     EnableIRQ(MT9V034_DMA_CHANNEL);
     EnableIRQ(PORTA_IRQn);
@@ -208,27 +214,34 @@ __ramfunc void MT9V034_FrameValid_Callback(uint32_t ISFR_FLAG)
 {
     static uint16_t line = 0;
 
-    if(ISFR_FLAG&(1U<<25U))
-    {
-        PORTA->ISFR |= (1U<<25U);
-        MT9V034_CaptureAccomplished = false;
-        PORTA->PCR[26U] = (PORTA->PCR[26U] & ~PORT_PCR_IRQC_MASK) | PORT_PCR_IRQC(kPORT_InterruptRisingEdge);
-        return;
-    }
-   
     if(ISFR_FLAG&(1U<<26U))
     {
-        MT9V034_LineValid_Callback(line++);
+        //PORTA->ISFR |= (1U<<26U);
+        //MT9V034_CaptureAccomplished = false;
+        //PORTA->PCR[25U] = (PORTA->PCR[25U] & ~PORT_PCR_IRQC_MASK) | PORT_PCR_IRQC(kPORT_InterruptRisingEdge);
+        //return;
         
         PORTA->ISFR |= (1U<<26U);
+        MT9V034_CaptureAccomplished = false;
         
-        if(line == MT9V034_H)
-        {
-            line = 0;
-            MT9V034_CaptureAccomplished = true;
-            PORTA->PCR[26U] = (PORTA->PCR[26U] & ~PORT_PCR_IRQC_MASK) | PORT_PCR_IRQC(kPORT_InterruptOrDMADisabled);
-        }
+        DMA0->TCD[0].DADDR = (uint32_t)&MT9V034_IMGBUFF[0];
+        //EDMA_EnableChannelRequest(DMA0, MT9V034_DMA_CHANNEL);
+        DMA0->SERQ = DMA_SERQ_SERQ(MT9V034_DMA_CHANNEL);
     }
+   
+    //if(ISFR_FLAG&(1U<<25U))
+    //{
+    //    MT9V034_LineValid_Callback(line++);
+    //    
+    //    PORTA->ISFR |= (1U<<25U);
+    //    
+    //    if(line == MT9V034_H)
+    //    {
+    //        line = 0;
+    //        MT9V034_CaptureAccomplished = true;
+    //        PORTA->PCR[25U] = (PORTA->PCR[25U] & ~PORT_PCR_IRQC_MASK) | PORT_PCR_IRQC(kPORT_InterruptOrDMADisabled);
+    //    }
+    //}
 }
 
 __ramfunc void MT9V034_LineValid_Callback(uint16_t line)
@@ -240,6 +253,7 @@ __ramfunc void MT9V034_LineValid_Callback(uint16_t line)
 __ramfunc void MT9V034_DMA_Callback(void)
 {
     DMA0->INT |= DMA_INT_INT0(1);
+    MT9V034_CaptureAccomplished = true;
 }
 
 ///////////////////////////////////////////////////////////////////////////////

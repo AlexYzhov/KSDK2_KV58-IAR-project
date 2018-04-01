@@ -11,7 +11,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>29</version>
+                <version>30</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.20.1.14181</state>
+                    <state>8.22.2.15993</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -121,11 +121,11 @@
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGUseCmsisDspLib</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GRuntimeLibThreads</name>
@@ -199,6 +199,10 @@
                 <option>
                     <name>DSPExtension</name>
                     <state>1</state>
+                </option>
+                <option>
+                    <name>TrustZone</name>
+                    <state>0</state>
                 </option>
             </data>
         </settings>
@@ -1057,7 +1061,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>29</version>
+                <version>30</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -1244,6 +1248,10 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZone</name>
                     <state>0</state>
                 </option>
             </data>
@@ -2172,6 +2180,9 @@
             <file>
                 <name>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034_REG.h</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\inc\ALEX_OLED_SSD1351.h</name>
+            </file>
         </group>
         <group>
             <name>src</name>
@@ -2180,6 +2191,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\drivers\src\ALEX_OLED_SSD1351.c</name>
             </file>
         </group>
     </group>
@@ -2278,6 +2292,12 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.c</name>
