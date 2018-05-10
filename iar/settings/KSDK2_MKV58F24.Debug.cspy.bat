@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\Proj_Kinetis\iar\settings\KSDK2_MKV58F24.Debug.general.xcl" --backend -f "D:\Proj_Kinetis\iar\settings\KSDK2_MKV58F24.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "F:\Proj_KV58\KSDK2_KV58-IAR-project\iar\settings\KSDK2_MKV58F24.Debug.general.xcl" --backend -f "F:\Proj_KV58\KSDK2_KV58-IAR-project\iar\settings\KSDK2_MKV58F24.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\Proj_Kinetis\iar\settings\KSDK2_MKV58F24.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Proj_Kinetis\iar\settings\KSDK2_MKV58F24.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "F:\Proj_KV58\KSDK2_KV58-IAR-project\iar\settings\KSDK2_MKV58F24.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\Proj_KV58\KSDK2_KV58-IAR-project\iar\settings\KSDK2_MKV58F24.Debug.driver.xcl" 
 
 @echo off 
 :end

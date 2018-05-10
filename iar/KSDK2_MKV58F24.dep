@@ -5,52 +5,296 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\..\board\inc\pin_mux.h</file>
-            <file>$PROJ_DIR$\..\board\src\board.c</file>
-            <file>$PROJ_DIR$\..\app\main.c</file>
-            <file>$PROJ_DIR$\..\board\inc\clock_config.h</file>
-            <file>$PROJ_DIR$\..\board\BOARD_Initialize.c</file>
-            <file>$PROJ_DIR$\..\app\inc\PART_I2C&amp;&amp;SCCB.h</file>
-            <file>$PROJ_DIR$\..\board\inc\board.h</file>
-            <file>$PROJ_DIR$\..\app\inc\PART_ASCII.h</file>
-            <file>$PROJ_DIR$\..\app\inc\PART_UpperCOM.h</file>
-            <file>$PROJ_DIR$\..\app\src\PART_I2C&amp;&amp;SCCB.c</file>
-            <file>$PROJ_DIR$\..\board\inc\RTE_Device.h</file>
-            <file>$PROJ_DIR$\..\app\src\PART_UpperCOM.c</file>
             <file>$PROJ_DIR$\..\board\src\clock_config.c</file>
+            <file>$PROJ_DIR$\..\app\main.c</file>
+            <file>$PROJ_DIR$\..\board\inc\RTE_Device.h</file>
             <file>$PROJ_DIR$\..\drivers\inc\ALEX_LCD_ST7735.h</file>
-            <file>$PROJ_DIR$\..\app\include.h</file>
+            <file>$PROJ_DIR$\..\board\inc\clock_config.h</file>
+            <file>$PROJ_DIR$\..\board\inc\pin_mux.h</file>
             <file>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034_REG.h</file>
+            <file>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</file>
+            <file>$PROJ_DIR$\..\app\src\PART_I2C&amp;&amp;SCCB.c</file>
+            <file>$PROJ_DIR$\..\drivers\src\ALEX_LCD_ST7735.c</file>
+            <file>$PROJ_DIR$\..\app\src\PART_ASCII.c</file>
+            <file>$PROJ_DIR$\..\board\inc\board.h</file>
+            <file>$PROJ_DIR$\..\app\src\PART_UpperCOM.c</file>
             <file>$PROJ_DIR$\..\drivers\inc\ALEX_MT9V034.h</file>
             <file>$PROJ_DIR$\..\drivers\inc\ALEX_OLED_SSD1351.h</file>
+            <file>$PROJ_DIR$\..\app\include.h</file>
+            <file>$PROJ_DIR$\..\drivers\src\ALEX_OLED_SSD1351.c</file>
+            <file>$PROJ_DIR$\..\board\src\board.c</file>
+            <file>$PROJ_DIR$\..\app\inc\PART_UpperCOM.h</file>
+            <file>$PROJ_DIR$\..\app\inc\PART_ASCII.h</file>
             <file>$PROJ_DIR$\..\board\src\pin_mux.c</file>
-            <file>$PROJ_DIR$\..\app\src\PART_ASCII.c</file>
+            <file>$PROJ_DIR$\..\board\BOARD_Initialize.c</file>
+            <file>$PROJ_DIR$\..\app\inc\PART_I2C&amp;&amp;SCCB.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\KSDK2_MKV58F24.out</file>
+            <file>$PROJ_DIR$\debug\obj\pin_mux.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dac.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_sysmpu.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pdb.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_common.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_notifier.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\pin_mux.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_uart.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pit.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_smc.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_crc.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flash.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\PART_ASCII.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_i2c.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexbus.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_ewm.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\debug\obj\BOARD_Initialize.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_sim.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_i2c_cmsis.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexcan.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\PART_ASCII.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\main.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\clock_config.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pwm.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi_edma.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_aoi.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_adc16.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_aoi.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_enet.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_llwu.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexbus.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pmc.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_trng.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexcan.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_xbara.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi_edma.o</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_MT9V034.o</file>
+            <file>$PROJ_DIR$\debug\obj\PART_I2C&amp;&amp;SCCB.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\MW_ALEX_Terminal.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_common.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_i2c.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\BOARD_Initialize.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_lptmr.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\clock_config.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pmc.o</file>
+            <file>$PROJ_DIR$\debug\List\KSDK2_MKV58F24.map</file>
+            <file>$PROJ_DIR$\debug\obj\BOARD_Initialize.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_llwu.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dma_manager.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_cmp.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_aoi.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_i2c_edma.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_LCD_ST7735.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\PART_ASCII.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexcan_edma.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pdb.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi_cmsis.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_notifier.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_xbarb.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_MT9V034.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_rcm.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_ftm.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_OLED_SSD1351.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dac.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_i2c_edma.o</file>
+            <file>$PROJ_DIR$\debug\obj\system_MKV58F24.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_OLED_SSD1351.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_llwu.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_smc.o</file>
+            <file>$PROJ_DIR$\debug\obj\pin_mux.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexcan_edma.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pmc.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_xbara.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dmamux.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_MT9V034.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\PART_I2C&amp;&amp;SCCB.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\debug\obj\board.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_adc16.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_uart_edma.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi_edma.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_crc.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_OLED_SSD1351.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_LCD_ST7735.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_clock.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flash.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\MW_ALEX_Terminal.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_uart_edma.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_edma.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\PART_UpperCOM.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\KSDK2_MKV58F24.pbd</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dmamux.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_gpio.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_i2c_cmsis.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_clock.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_ewm.o</file>
+            <file>$PROJ_DIR$\debug\obj\startup_MKV58F24.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_hsadc.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_smc.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_sysmpu.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dmamux.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pit.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_xbarb.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dac.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_trng.o</file>
+            <file>$PROJ_DIR$\debug\List\KSDK2_MKV58F24.log</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_hsadc.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_uart.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flexcan.o</file>
+            <file>$PROJ_DIR$\debug\obj\system_MKV58F24.o</file>
+            <file>$PROJ_DIR$\debug\obj\main.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_adc16.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dma_manager.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_lptmr.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\debug\obj\board.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_crc.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_flash.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pwm.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_SPI.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_cmp.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_I2C.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_cmp.h</file>
+            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_Common.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_USART.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.c</file>
+            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cm7.h</file>
+            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cmSimd.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan_edma.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_cmsis.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_edma.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dmamux.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan_edma.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_common.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_edma.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dmamux.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dac.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_edma.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_crc.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ewm.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_edma.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ftm.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ftm.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_crc.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexbus.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexbus.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_cmsis.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_common.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_enet.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_enet.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dac.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ewm.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flash.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flash.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_trng.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\startup\system_MKV58F24.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbarb.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\MKV58F24.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_debug_console.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\startup\system_MKV58F24.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_shell.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_wdog.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_cmsis.c</file>
+            <file>$PROJ_DIR$\..\middleware\dma_manager_2.1.0\fsl_dma_manager.c</file>
+            <file>$PROJ_DIR$\..\middleware\Terminal_0.01a\inc\MW_ALEX_Terminal.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_notifier.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_notifier.h</file>
+            <file>$PROJ_DIR$\..\middleware\Terminal_0.01a\src\MW_ALEX_Terminal.c</file>
+            <file>$PROJ_DIR$\..\middleware\dma_manager_2.1.0\fsl_dma_manager.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_edma.c</file>
+            <file>$PROJ_DIR$\MKV58F1M0xxx24_flash.icf</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbarb.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\startup\startup_MKV58F24.s</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_debug_console.h</file>
             <file>$PROJ_DIR$\debug\obj\fsl_wdog.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbara.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\MKV58F24_features.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_wdog.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_edma.h</file>
             <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-            <file>$PROJ_DIR$\debug\obj\clock_config.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_shell.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_ewm.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_xbara.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_ftm.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\PART_UpperCOM.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\board.o</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_cmsis.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbara.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_shell.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pmc.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_port.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_rcm.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sim.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_smc.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_edma.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pmc.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_smc.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sysmpu.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pwm.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_llwu.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sysmpu.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_trng.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_hsadc.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_gpio.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pdb.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_lptmr.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pdb.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pit.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pwm.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_cmsis.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_lptmr.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pit.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_rcm.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sim.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_hsadc.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_edma.c</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_llwu.h</file>
+            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_cmsis.c</file>
             <file>$PROJ_DIR$\debug\obj\fsl_flexbus.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pit.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pwm.__cstat.et</file>
             <file>$PROJ_DIR$\debug\obj\fsl_uart_edma.__cstat.et</file>
             <file>$PROJ_DIR$\debug\obj\fsl_edma.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_sysmpu.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_cmp.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pit.__cstat.et</file>
             <file>$PROJ_DIR$\debug\obj\fsl_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.__cstat.et</file>
             <file>$PROJ_DIR$\debug\obj\fsl_i2c_cmsis.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_sim.__cstat.et</file>
             <file>$PROJ_DIR$\debug\obj\fsl_ftm.o</file>
             <file>$PROJ_DIR$\debug\obj\fsl_pdb.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_rcm.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_cmp.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_xbara.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\clock_config.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_ftm.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_uart.__cstat.et</file>
-            <file>$PROJ_DIR$\KSDK2_MKV58F24.icf</file>
+            <file>$PROJ_DIR$\debug\obj\PART_UpperCOM.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_sim.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_shell.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_rcm.o</file>
             <file>$PROJ_DIR$\debug\obj\fsl_i2c.pbi</file>
             <file>$PROJ_DIR$\debug\obj\system_MKV58F24.__cstat.et</file>
             <file>$PROJ_DIR$\debug\obj\fsl_i2c_edma.__cstat.et</file>
@@ -58,864 +302,50 @@
             <file>$PROJ_DIR$\debug\obj\fsl_rcm.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_edma.o</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$PROJ_DIR$\debug\obj\MW_ALEX_Terminal.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_uart_cmsis.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_sim.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi_cmsis.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_lptmr.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi_cmsis.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_gpio.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_ewm.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_pwm.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\board.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_notifier.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_uart_cmsis.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dma_manager.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_flexcan_edma.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_wdog.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_uart_cmsis.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi_cmsis.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_gpio.o</file>
             <file>$PROJ_DIR$\debug\obj\fsl_shell.o</file>
             <file>$PROJ_DIR$\debug\obj\fsl_enet.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_hsadc.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
             <file>$PROJ_DIR$\debug\obj\fsl_clock.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_shell.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_trng.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_LCD_ST7735.pbi</file>
             <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_notifier.o</file>
             <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_uart_cmsis.o</file>
+            <file>$PROJ_DIR$\debug\obj\MW_ALEX_Terminal.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\ALEX_LCD_ST7735.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_shell.pbi</file>
             <file>$PROJ_DIR$\debug\obj\PART_I2C&amp;&amp;SCCB.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_wdog.o</file>
             <file>$PROJ_DIR$\debug\obj\fsl_xbarb.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\PART_UpperCOM.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_dspi.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dma_manager.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_wdog.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_trng.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_sim.o</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_wdog.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_dspi_cmsis.o</file>
+            <file>$PROJ_DIR$\debug\obj\PART_UpperCOM.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_cmp.pbi</file>
             <file>$PROJ_DIR$\debug\obj\fsl_enet.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_smc.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dac.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pwm.o</file>
-            <file>$PROJ_DIR$\debug\obj\pin_mux.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pdb.pbi</file>
-            <file>$PROJ_DIR$\debug\Exe\KSDK2_MKV58F24.out</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pit.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexbus.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_ewm.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexcan.pbi</file>
-            <file>$TOOLKIT_DIR$\CMSIS\Lib\IAR\iar_cortexM7ls_math.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$PROJ_DIR$\debug\obj\pin_mux.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flash.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_i2c_cmsis.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_crc.o</file>
-            <file>$PROJ_DIR$\debug\obj\BOARD_Initialize.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_notifier.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_sysmpu.o</file>
-            <file>$PROJ_DIR$\debug\obj\PART_ASCII.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\PART_ASCII.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_common.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_uart.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_i2c.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_sim.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\main.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\clock_config.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi_edma.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\main.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_i2c_cmsis.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_crc.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_adc16.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_uart.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dma_manager.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexcan.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_hsadc.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\startup_MKV58F24.o</file>
-            <file>$PROJ_DIR$\debug\obj\system_MKV58F24.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flash.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_lptmr.o</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_trng.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dac.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_common.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_xbarb.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$PROJ_DIR$\debug\obj\board.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pit.o</file>
-            <file>$PROJ_DIR$\debug\List\KSDK2_MKV58F24.log</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pwm.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_ewm.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dmamux.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_clock.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_sysmpu.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_hsadc.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_smc.pbi</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\debug\obj\clock_config.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pmc.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi_edma.o</file>
-            <file>$PROJ_DIR$\debug\List\KSDK2_MKV58F24.map</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_adc16.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_aoi.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_aoi.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_xbara.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_MT9V034.o</file>
-            <file>$PROJ_DIR$\debug\obj\PART_I2C&amp;&amp;SCCB.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_llwu.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\BOARD_Initialize.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_i2c.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_llwu.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_i2c_edma.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_aoi.__cstat.et</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_cmsis.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexbus.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_cmp.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dmamux.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_crc.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_crc.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_cmsis.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_edma.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flash.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_enet.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_enet.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_edma.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dac.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dmamux.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_edma.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexbus.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_cmp.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_common.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_common.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ewm.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ewm.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan_edma.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_edma.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flash.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dac.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_USART.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.c</file>
-            <file>$PROJ_DIR$\..\drivers\src\ALEX_MT9V034.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.c</file>
-            <file>$PROJ_DIR$\..\drivers\src\ALEX_OLED_SSD1351.c</file>
-            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cmInstr.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_Common.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_SPI.h</file>
-            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cm7.h</file>
-            <file>$PROJ_DIR$\..\drivers\src\ALEX_LCD_ST7735.c</file>
-            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cmSimd.h</file>
-            <file>$PROJ_DIR$\..\Library\CMSIS\Include\core_cmFunc.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\Driver_I2C.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_trng.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_edma.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sysmpu.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_trng.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_edma.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_debug_console.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbara.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbarb.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\startup\system_MKV58F24.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_notifier.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sysmpu.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_shell.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\fsl_device_registers.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\startup\system_MKV58F24.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\MKV58F24.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_cmsis.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_smc.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_cmsis.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\startup\startup_MKV58F24.s</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_shell.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\MKV58F24_features.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_debug_console.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_notifier.c</file>
-            <file>$PROJ_DIR$\..\middleware\dma_manager_2.1.0\fsl_dma_manager.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbara.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbarb.c</file>
-            <file>$PROJ_DIR$\..\middleware\dma_manager_2.1.0\fsl_dma_manager.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_wdog.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_wdog.h</file>
-            <file>$PROJ_DIR$\..\middleware\Terminal_0.01a\inc\MW_ALEX_Terminal.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sim.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_cmsis.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_cmsis.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_gpio.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_edma.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_llwu.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_llwu.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_lptmr.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ftm.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_gpio.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pdb.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pit.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pit.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pdb.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pmc.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pmc.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pwm.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pwm.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_rcm.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan_edma.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_rcm.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_hsadc.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sim.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_smc.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_edma.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_port.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ftm.c</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_hsadc.h</file>
-            <file>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_lptmr.h</file>
-            <file>$PROJ_DIR$\debug\obj\PART_ASCII.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\BOARD_Initialize.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_LCD_ST7735.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\MW_ALEX_Terminal.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_enet.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_common.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_lptmr.__cstat.et</file>
-            <file>$PROJ_DIR$\MKV58F1M0xxx24_flash.icf</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dma_manager.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pmc.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexcan.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_cmp.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexbus.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_trng.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dmamux.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_ftm.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_debug_console.o</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_MT9V034.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\board.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pmc.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_notifier.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_pdb.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_smc.o</file>
-            <file>$PROJ_DIR$\debug\obj\PART_I2C&amp;&amp;SCCB.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_llwu.__cstat.et</file>
-            <file>$PROJ_DIR$\..\middleware\Terminal_0.01a\src\MW_ALEX_Terminal.c</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_rcm.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\pin_mux.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_OLED_SSD1351.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_adc16.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_xbarb.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_MT9V034.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dac.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexcan_edma.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flexcan_edma.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_xbara.o</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_OLED_SSD1351.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi_cmsis.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_i2c_edma.o</file>
-            <file>$PROJ_DIR$\debug\obj\system_MKV58F24.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_gpio.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dmamux.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_dspi_edma.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\PART_UpperCOM.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_crc.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_uart_edma.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_uart_edma.pbi</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_OLED_SSD1351.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$PROJ_DIR$\debug\obj\ALEX_LCD_ST7735.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_clock.__cstat.et</file>
-            <file>$PROJ_DIR$\debug\obj\KSDK2_MKV58F24.pbd</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_edma.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\debug\obj\MW_ALEX_Terminal.o</file>
-            <file>$PROJ_DIR$\debug\obj\fsl_flash.__cstat.et</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_lptmr.pbi</file>
+            <file>$PROJ_DIR$\debug\obj\fsl_hsadc.o</file>
         </outputs>
-        <file>
-            <name>$PROJ_DIR$\..\board\src\board.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 29</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 133</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 291</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 272 87 318 185 205 223 269 17 307 310 218 243 3 8 13 21 74 227 173 199 216 251 0 241 231 207 314 97 14 140 215 71 327 170 217 187 167 246 271 189 194 255 6 16 5 225 224 202 305 333 328 208 66 137 148 132 52 157 15 7</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\app\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 115</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 111</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 300</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 15 74 216 97 173 0 185 21 227 199 251 241 225 224 207 307 314 87 223 310 218 269 243 272 3 17 8 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\board\BOARD_Initialize.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 159</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 102</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 274</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 15 218 3 97 310 243 8 185 223 269 272 17 207 307 314 87 21 74 227 173 199 216 251 0 241 225 224 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\app\src\PART_I2C&amp;&amp;SCCB.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 76</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 156</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 296</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 255 87 318 170 224 215 246 16 225 307 71 187 189 6 13 140 327 217 167 271 194 5 207 314 185 97 14 223 21 310 74 227 218 173 269 199 243 216 272 251 3 0 17 241 8 231 205 202 305 333 328 208 66 137 148 132 52 157 15 7</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\app\src\PART_UpperCOM.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 27</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 79</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 322</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 15 272 185 97 223 269 17 310 218 243 3 8 207 307 314 87 21 74 227 173 199 216 251 0 241 225 224 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\..\board\src\clock_config.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 146</file>
+                    <file> 71</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 112</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 22</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 3 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 74 318 185 305 87 231 202 97 132 170 333 205 207 314 140 223 66 137 328 225 224 208 307 148 3</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\board\src\pin_mux.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 89</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 98</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 301</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 15 74 216 97 173 0 185 21 227 199 251 241 225 224 207 307 314 87 223 310 218 269 243 272 3 17 8 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\app\src\PART_ASCII.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 106</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 105</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 273</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 15 3 218 97 310 243 8 185 223 269 272 17 207 307 314 87 21 74 227 173 199 216 251 0 241 225 224 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 91 150 135</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\debug\Exe\KSDK2_MKV58F24.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 150 135</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 45 329 155 302 29 159 146 151 153 141 36 130 101 129 289 120 320 80 59 149 51 83 138 125 93 121 309 41 60 65 109 100 316 161 126 73 42 134 147 88 43 63 55 295 104 128 108 75 324 77 312 131 115 334 106 76 27 89 123 124 96 145 72 39 127</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_cmsis.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 59</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 56</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 315</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 171 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 10 204 203 193 189 173 167</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 87 208 10 231 193 314 305 307 173 140 223 333 205 132 185 204 167 97 74 170 66 137 328 225 224 171 202 207 148 203 189</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexbus.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 93</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 30</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 285</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 181 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 137 140 305 328 74 318 225 224 185 97 132 170 66 87 314 223 333 231 205 208 307 181 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_cmp.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 36</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 82</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 284</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 183 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 231 185 318 202 87 74 305 97 132 170 333 205 207 314 140 223 66 137 328 225 224 208 307 148 183</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_crc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 101</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 117</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 323</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 168 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 305 74 225 140 318 224 137 328 97 132 170 66 87 185 314 223 333 231 205 208 307 168 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 80</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 58</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 114</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 189 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 140 223 333 305 205 314 318 87 231 185 97 74 132 170 66 137 328 225 224 208 307 189 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flash.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 125</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 99</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 335</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 194 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 140 314 305 185 87 231 223 333 205 97 74 132 170 66 137 328 225 224 208 307 194 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_enet.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 83</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 64</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 277</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 176 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 140 223 333 305 205 314 318 87 231 185 97 74 132 170 66 137 328 225 224 208 307 176 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_edma.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 51</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 34</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 332</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 173 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 66 140 132 87 185 97 170 318 74 305 137 328 225 224 314 223 333 231 205 208 307 173 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dac.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 129</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 85</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 308</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 195 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 97 170 207 185 132 333 305 205 74 318 87 231 202 314 140 223 66 137 328 225 224 208 307 148 195</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dmamux.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 320</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 139</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 287</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 167 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 333 132 305 205 97 170 207 74 318 87 231 202 185 314 140 223 66 137 328 225 224 208 307 148 167</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_edma.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 149</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 113</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 321</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 193 189 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 231 208 87 314 305 307 189 140 223 333 205 173 185 97 74 132 170 66 137 328 225 224 193 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 141</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 67</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 330</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 170 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 185 205 305 140 333 307 223 314 318 87 231 208 97 74 132 170 66 137 328 225 224 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 121</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 95</file>
+                    <file> 48</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -925,119 +355,38 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 186 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 4 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 225 185 74 305 140 318 224 137 328 97 132 170 66 87 314 223 333 231 205 208 307 186 202 207 148</file>
+                    <file> 311 99 183 109 41 232 171 49 155 166 128 175 176 114 160 210 322 137 130 212 209 170 91 79 4</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_common.c</name>
+            <name>$PROJ_DIR$\..\app\main.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 130</file>
+                    <file> 150</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 107</file>
+                    <file> 47</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 278</file>
+                    <file> 88</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 215</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 305 318 223 224 225 140 137 328 314 66 87 208 215 97 74 132 170 333 231 205 202 207 307 185 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ewm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 138</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 94</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 24</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 190 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 74 305 185 87 231 202 97 132 170 333 205 207 314 140 223 66 137 328 225 224 208 307 148 190</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan_edma.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 309</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 61</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 311</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 262 186 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 167 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 231 87 167 314 305 207 140 223 333 205 307 148 185 186 173 97 74 132 170 66 137 328 225 224 202 262 208</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 151</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 118</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 303</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 199 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 314 66 87 208 140 223 305 137 328 225 224 185 97 74 132 170 333 231 205 202 207 307 148 199</file>
+                    <file> 99 6 311 237 49 184 5 183 235 247 163 194 220 212 209 176 91 114 41 210 110 211 241 268 256 4 14 18 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 171 109 128 130 15 170 322 137 79 155 296 80 19</file>
                 </tool>
             </inputs>
         </file>
@@ -1046,79 +395,52 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 155</file>
+                    <file> 64</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 306</file>
+                    <file> 90</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 290</file>
+                    <file> 107</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 0 318 15 173 97 74 216 185 21 227 199 251 241 225 224 207 307 314 87 223 310 218 269 243 272 3 17 8 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
+                    <file> 5 137 99 6 184 170 49 311 237 183 235 247 163 194 220 212 209 91 114 41 210 110 211 241 268 256 4 14 18 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 322 79 109 130 15 171 176 128 155 296 80 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.c</name>
+            <name>$PROJ_DIR$\..\app\src\PART_I2C&amp;&amp;SCCB.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 153</file>
+                    <file> 315</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 152</file>
+                    <file> 65</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 163</file>
+                    <file> 108</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 187 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 140 97 170 318 132 66 87 74 305 137 328 225 224 185 314 223 333 231 205 208 307 187 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\drivers\src\ALEX_OLED_SSD1351.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 302</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 313</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 326</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 243 87 318 310 8 218 3 307 223 185 269 272 17 205 13 21 74 227 173 199 216 251 0 241 231 207 314 97 14 140 215 71 327 170 217 187 167 246 271 189 194 255 6 16 5 225 224 202 305 333 328 208 66 137 148 132 52 157 15 7</file>
+                    <file> 262 41 99 166 209 229 254 13 212 91 310 164 198 11 3 160 124 231 181 266 207 22 170 137 114 183 49 15 210 235 110 311 247 211 184 241 163 268 237 256 194 4 5 14 220 18 232 175 322 79 109 130 171 176 128 155 296 80 6 19</file>
                 </tool>
             </inputs>
         </file>
@@ -1127,61 +449,61 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 329</file>
+                    <file> 119</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 70</file>
+                    <file> 313</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 275</file>
+                    <file> 82</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 194 87 318 327 167 13 307 140 217 271 215 5 71 170 187 246 189 255 6 16 225 224 207 314 185 97 14 223 21 310 74 227 218 173 269 199 243 216 272 251 3 0 17 241 8 231 205 202 305 333 328 208 66 137 148 132 52 157 15 7</file>
+                    <file> 207 41 99 124 181 3 91 160 231 266 229 22 310 166 164 254 198 262 11 13 212 209 170 137 114 183 49 15 210 235 110 311 247 211 184 241 163 268 237 256 194 4 5 14 220 18 232 175 322 79 109 130 171 176 128 155 296 80 6 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_trng.c</name>
+            <name>$PROJ_DIR$\..\app\src\PART_ASCII.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 128</file>
+                    <file> 36</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 69</file>
+                    <file> 46</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
+                    <file> 83</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137 99 6 4 211 170 49 110 268 18 183 210 241 256 14 91 114 41 235 311 247 184 163 237 194 5 220 212 209 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 322 79 109 130 15 171 176 128 155 296 80 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\app\src\PART_UpperCOM.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
                     <file> 286</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 210 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 74 305 225 140 185 318 224 137 328 97 132 170 66 87 314 223 333 231 205 208 307 210 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_edma.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 324</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -1189,660 +511,246 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 33</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 211 216 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 167 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 305 185 328 167 137 74 318 225 224 97 132 170 66 87 202 216 173 314 140 223 333 231 205 207 307 148 211 208</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\startup\system_MKV58F24.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 317</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 47</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 140 305 318 333 66 137 223 225 205 202 307 148 208 207 224 231</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 307 66 225 224 208 223 305 137 140 318 333 231 205 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sysmpu.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 104</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 142</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 35</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 212 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 132 87 140 66 97 170 318 74 305 137 328 225 224 185 314 223 333 231 205 208 307 212 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_cmsis.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 75</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 54</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 49</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 226 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 196 203 10 216 167 211 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 97 170 196 132 66 87 216 211 74 305 137 328 225 224 140 185 10 167 314 223 333 231 205 208 307 173 226 202 207 148 203</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\startup\startup_MKV58F24.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 123</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_shell.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 63</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 68</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 23</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 314 305 318 333 66 137 222 185 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 223 140 318 87 333 314 305 328 225 224 222 66 137 185 97 74 132 170 231 205 208 307 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_debug_console.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 289</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 86</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 28</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 310 305 318 333 66 137 87 52 327 157 215 185 314 97 140 74 328 132 223 225 205 202 307 148 208 207 224 231 170 216</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 66 87 157 140 318 314 205 327 216 137 305 223 231 310 215 333 52 185 97 74 132 170 328 225 224 208 307 71 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_notifier.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 73</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 103</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 293</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 220 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 140 223 185 333 305 205 314 318 87 231 97 74 132 170 66 137 328 225 224 208 307 220 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\middleware\dma_manager_2.1.0\fsl_dma_manager.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 120</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 81</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 281</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 238 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 167 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 97 170 318 173 132 66 87 185 74 305 137 328 225 224 202 167 314 140 223 333 231 205 207 307 148 238 208</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 108</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 119</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 44</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 216 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 140 333 305 205 223 314 318 87 231 185 97 74 132 170 66 137 328 225 224 208 307 216 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbara.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 312</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 154</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 25</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 217 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 314 66 87 208 185 140 223 305 137 328 225 224 97 74 132 170 333 231 205 202 207 307 148 217</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbarb.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 131</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 78</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 304</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 218 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 318 314 66 87 208 185 140 223 305 137 328 225 224 97 74 132 170 333 231 205 202 207 307 148 218</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_wdog.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 77</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 62</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 20</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 240 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 207 97 170 132 333 305 205 185 74 318 87 231 202 314 140 223 66 137 328 225 224 208 307 148 240</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sim.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 55</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 110</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 40</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 265 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 225 305 223 318 224 140 137 328 314 66 87 208 185 97 74 132 170 333 231 205 202 207 307 148 265</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_cmsis.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 100</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 116</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 38</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 245 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 209 203 10 243 167 268 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 314 185 305 318 87 231 203 10 167 140 223 333 205 202 209 243 268 97 74 132 170 66 137 328 225 224 207 307 148 245 208 173</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_edma.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 316</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 162</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 48</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 268 243 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 167 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 243 97 170 318 185 132 66 87 173 74 305 137 328 225 224 202 167 314 140 223 333 231 205 207 307 148 268 208</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_llwu.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 161</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 158</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 297</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 249 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 66 314 87 208 318 140 223 305 137 328 225 224 185 97 74 132 170 333 231 205 202 207 307 148 249</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_lptmr.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
                     <file> 126</file>
                 </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
+                </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 57</file>
+                    <file> 137 99 6 256 183 170 49 210 241 14 110 211 268 4 18 91 114 41 235 311 247 184 163 237 194 5 220 212 209 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 322 79 109 130 15 171 176 128 155 296 80 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\drivers\src\ALEX_OLED_SSD1351.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 98</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 279</file>
+                    <file> 118</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 272 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 318 87 140 231 202 314 305 223 333 205 207 185 97 74 132 170 66 137 328 225 224 208 307 272 148</file>
+                    <file> 268 41 99 110 18 211 4 91 210 183 241 256 14 175 3 235 311 247 184 163 237 194 5 220 232 170 137 114 49 15 160 229 310 124 166 231 164 181 254 266 198 207 262 11 13 22 212 209 322 79 109 130 171 176 128 155 296 80 6 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_gpio.c</name>
+            <name>$PROJ_DIR$\..\board\src\board.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 60</file>
+                    <file> 299</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 319</file>
+                    <file> 156</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 37</file>
+                    <file> 111</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 246 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 225 74 305 140 318 224 137 328 185 97 132 170 66 87 208 314 223 333 231 205 202 207 307 246 148</file>
+                    <file> 256 41 99 183 175 210 241 14 91 110 211 268 4 18 3 235 311 247 184 163 237 194 5 220 232 170 137 114 49 15 160 229 310 124 166 231 164 181 254 266 198 207 262 11 13 22 212 209 322 79 109 130 171 176 128 155 296 80 6 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pdb.c</name>
+            <name>$PROJ_DIR$\..\board\src\pin_mux.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 102</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 6 311 237 49 184 5 183 235 247 163 194 220 212 209 176 91 114 41 210 110 211 241 268 256 4 14 18 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 171 109 128 130 15 170 322 137 79 155 296 80 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board\BOARD_Initialize.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
                     <file> 42</file>
                 </tool>
                 <tool>
-                    <name>BICOMP</name>
-                    <file> 90</file>
-                </tool>
-                <tool>
                     <name>__cstat</name>
-                    <file> 294</file>
+                    <file> 69</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 256 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 314 305 140 318 87 231 185 223 333 205 97 74 132 170 66 137 328 225 224 208 307 256 202 207 148</file>
+                    <file> 137 99 6 211 4 170 49 110 268 18 183 210 241 256 14 91 114 41 235 311 247 184 163 237 194 5 220 212 209 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 322 79 109 130 15 171 176 128 155 296 80 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pit.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_adc16.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 134</file>
+                    <file> 54</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 92</file>
+                    <file> 151</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 31</file>
+                    <file> 113</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 255 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 163 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 66 314 87 208 185 318 140 223 305 137 328 225 224 97 74 132 170 333 231 205 202 207 307 148 255</file>
+                    <file> 99 114 322 41 170 160 210 109 137 130 212 209 183 49 311 155 166 128 232 175 171 176 91 79 163</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pmc.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_clock.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 147</file>
+                    <file> 133</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 282</file>
+                    <file> 309</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 292</file>
+                    <file> 120</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 258 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 166 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 231 318 202 87 74 305 97 132 170 333 205 207 185 314 140 223 66 137 328 225 224 208 307 148 258</file>
+                    <file> 183 175 109 160 128 91 210 114 99 41 232 170 49 311 155 166 322 137 130 212 209 171 176 79</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pwm.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_cmp.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 88</file>
+                    <file> 281</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 136</file>
+                    <file> 326</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 32</file>
+                    <file> 77</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 260 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 169 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 140 223 333 305 205 314 318 87 231 185 97 74 132 170 66 137 328 225 224 208 307 260 202 207 148</file>
+                    <file> 232 183 99 171 41 311 109 49 155 166 128 175 176 114 160 210 322 137 130 212 209 170 91 79 169</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_rcm.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_aoi.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 43</file>
+                    <file> 78</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 50</file>
+                    <file> 53</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 299</file>
+                    <file> 55</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 263 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 164 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 207 97 170 185 132 333 305 205 74 318 87 231 202 314 140 223 66 137 328 225 224 208 307 148 263</file>
+                    <file> 160 49 166 99 155 322 41 311 109 137 130 212 209 183 114 210 128 232 175 170 91 164 171 176 79</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_hsadc.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan_edma.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 65</file>
+                    <file> 103</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 122</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 143</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 271 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 66 140 132 87 97 170 318 74 305 137 328 225 224 185 314 223 333 231 205 208 307 271 202 207 148</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_smc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 295</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 144</file>
+                    <file> 303</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -1852,38 +760,200 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 227 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170 194</file>
+                    <file> 182 177 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 181 184</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 207 305 205 140 333 318 223 314 87 231 307 148 185 194 97 74 132 170 66 137 328 225 224 202 227 208</file>
+                    <file> 99 232 41 181 114 109 176 160 210 128 175 91 79 183 177 184 49 311 155 166 322 137 130 212 209 171 182 170</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_edma.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 109</file>
+                    <file> 63</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 46</file>
+                    <file> 51</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 160</file>
+                    <file> 116</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 243 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 188 198 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 184</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 305 205 140 333 223 314 318 87 231 185 97 74 132 170 66 137 328 225 224 208 307 243 202 207 148</file>
+                    <file> 99 232 170 41 114 109 91 198 160 210 128 175 184 183 49 311 155 166 322 137 130 212 209 188 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dmamux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 140</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 181 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 128 155 109 175 49 166 176 311 99 41 232 171 183 114 160 210 322 137 130 212 209 170 91 79 181</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 25</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 95</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 204 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 166 176 183 155 128 109 175 311 99 41 232 171 114 160 210 322 137 130 212 209 170 91 79 204</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 317</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 321</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 198 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160 210 128 109 175 114 99 41 232 183 49 311 155 166 322 137 130 212 209 170 91 198 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_ewm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 134</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 297</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 205 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 311 109 183 41 232 171 49 155 166 128 175 176 114 160 210 322 137 130 212 209 170 91 79 205</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_edma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 295</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 273</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 125</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 322 160 155 41 183 49 166 99 311 109 137 130 212 209 114 210 128 232 175 170 91 184 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexcan.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 148</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 61</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 177 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 212 183 311 109 160 99 209 137 130 49 155 166 322 41 114 210 128 232 175 170 91 177 171 176 79</file>
                 </tool>
             </inputs>
         </file>
@@ -1892,38 +962,65 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 41</file>
+                    <file> 279</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 26</file>
+                    <file> 284</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 288</file>
+                    <file> 93</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 251 185 314 305 318 333 66 137 97 140 74 87 328 132 223 225 205 202 307 148 208 207 224 231 170</file>
+                    <file> 194 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 318 140 314 305 87 231 223 333 205 185 97 74 132 170 66 137 328 225 224 208 307 251 202 207 148</file>
+                    <file> 99 160 114 109 41 232 210 128 175 183 49 311 155 166 322 137 130 212 209 170 91 194 171 176 79</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\middleware\Terminal_0.01a\src\MW_ALEX_Terminal.c</name>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_crc.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 334</file>
+                    <file> 34</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 53</file>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 189 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109 311 212 160 99 209 137 130 49 155 166 322 41 183 114 210 128 232 175 170 91 189 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 306</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 131</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -1933,13 +1030,895 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14 223 225 205 140 305 318 333 66 137 202 307 148 208 207 224 231 215 185 314 97 74 87 328 132 170 21 310 52 327 157 227 217 218 187 173 167 269 246 199 271 243 189 216 194 272 255 251 3 6 0 13 17 16 15 241 7 5 8</file>
+                    <file> 254 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 318 15 218 3 97 310 243 8 185 223 269 272 17 207 307 314 87 21 74 227 173 199 216 251 0 241 225 224 215 140 71 327 170 217 187 167 246 271 189 194 255 6 13 16 5 231 205 202 305 333 328 14 208 66 137 148 132 52 157 7</file>
+                    <file> 212 311 109 160 99 209 137 130 183 49 155 166 322 41 170 114 210 128 232 175 171 176 91 254 79</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flexbus.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 271</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137 160 109 130 311 99 212 209 183 49 155 166 322 41 114 210 128 232 175 170 91 199 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_dspi_cmsis.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 324</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 305</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 2 161 172 188 198 184 181</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 41 170 2 232 188 114 109 91 184 160 210 128 175 155 183 161 181 49 311 166 322 137 130 212 209 179 171 176 79 172 198</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 153</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 28</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 67</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 229</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109 99 210 209 212 160 137 130 114 322 41 170 229 49 311 155 166 128 232 175 171 176 91 183 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_enet.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 327</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 308</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 203 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160 210 128 109 175 114 99 41 232 183 49 311 155 166 322 137 130 212 209 170 91 203 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 158</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 35</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 207 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 160 114 109 183 41 232 210 128 175 49 311 155 166 322 137 130 212 209 170 91 207 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_debug_console.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 277</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 110 109 99 128 322 137 41 296 124 80 229 183 114 49 160 311 130 155 210 212 175 171 91 79 170 176 209 232 166 237</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 322 41 80 160 99 114 175 124 237 137 109 210 232 110 229 128 296 183 49 311 155 166 130 212 209 170 91 310 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\startup\system_MKV58F24.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 149</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 291</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 109 99 128 322 137 210 212 175 171 91 79 170 176 209 232</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 91 322 212 209 170 210 109 137 160 99 128 232 175 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 147</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 285</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 237 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160 128 109 175 210 114 99 41 232 183 49 311 155 166 322 137 130 212 209 170 91 237 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_cmsis.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 301</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 304</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 293</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 236 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 173 172 2 237 181 234 184</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 49 166 173 155 322 41 237 234 311 109 137 130 212 209 160 183 2 181 114 210 128 232 175 170 91 184 236 171 176 79 172</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\middleware\dma_manager_2.1.0\fsl_dma_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 152</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 302</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 76</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 224 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 181 184</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 166 99 184 155 322 41 160 183 311 109 137 130 212 209 181 114 210 128 232 175 170 224 171 176 91 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_notifier.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 300</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 87</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 222 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160 210 183 128 109 175 114 99 41 232 49 311 155 166 322 137 130 212 209 170 91 222 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\middleware\Terminal_0.01a\src\MW_ALEX_Terminal.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 122</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 312</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15 210 212 175 160 109 99 128 322 137 171 91 79 170 176 209 232 229 183 114 49 311 41 130 155 166 235 110 296 124 80 247 231 211 164 184 181 241 254 163 266 268 198 237 207 256 262 194 4 11 5 3 14 13 6 220 19 22 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137 99 6 211 4 170 49 110 268 18 183 210 241 256 14 91 114 41 235 311 247 184 163 237 194 5 220 212 209 229 160 310 124 166 231 164 181 254 266 198 207 262 11 3 13 22 232 175 322 79 109 130 15 171 176 128 155 296 80 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_uart_edma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 115</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 123</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 272</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 234 237 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 181 184</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109 183 130 181 137 311 99 212 209 49 155 166 322 41 171 237 184 114 160 210 128 232 175 176 91 79 234 170</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbarb.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 142</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 316</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 89</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 211 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 114 322 41 170 183 160 210 109 137 130 212 209 49 311 155 166 128 232 175 171 176 91 79 211</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\startup\startup_MKV58F24.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 135</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_wdog.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 318</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 323</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 230</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 217 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 176 49 166 155 128 109 175 183 311 99 41 232 171 114 160 210 322 137 130 212 209 170 91 79 217</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_xbara.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 282</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 231 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 114 322 41 170 183 160 210 109 137 130 212 209 49 311 155 166 128 232 175 171 176 91 79 231</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\utilities\fsl_shell.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 307</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 314</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 288</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114 109 99 128 322 137 215 183 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 210 160 99 41 128 114 109 130 212 209 215 322 137 183 49 311 155 166 232 175 170 91 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 59</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 104</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 246 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 232 99 171 41 311 109 49 155 166 128 175 176 183 114 160 210 322 137 130 212 209 170 91 79 246</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 320</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 287</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 265 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 212 109 210 99 209 160 137 130 114 322 41 170 183 49 311 155 166 128 232 175 171 176 91 79 265</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_smc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 247 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 207</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 176 109 175 160 128 99 210 114 41 232 91 79 183 207 49 311 155 166 322 137 130 212 209 171 247 170</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_sysmpu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 139</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 274</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 251 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 155 41 160 322 49 166 99 311 109 137 130 212 209 183 114 210 128 232 175 170 91 251 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pwm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 159</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 298</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 259 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160 210 128 109 175 114 99 41 232 183 49 311 155 166 322 137 130 212 209 170 91 259 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_llwu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 75</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 100</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 269 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 322 114 41 170 99 160 210 109 137 130 212 209 183 49 311 155 166 128 232 175 171 176 91 79 269</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_trng.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 319</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 60</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 208 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 311 109 212 160 183 99 209 137 130 49 155 166 322 41 114 210 128 232 175 170 91 208 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_hsadc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 329</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 136</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 146</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 266 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 322 160 155 41 49 166 99 311 109 137 130 212 209 183 114 210 128 232 175 170 91 266 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pdb.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 280</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 85</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 255 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 114 109 160 99 41 232 183 210 128 175 49 311 155 166 322 137 130 212 209 170 91 255 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_pit.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 275</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 322 114 41 170 183 99 160 210 109 137 130 212 209 49 311 155 166 128 232 175 171 176 91 79 262</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_lptmr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 154</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 328</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 70</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 256 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 99 41 160 232 171 114 109 210 128 175 176 183 49 311 155 166 322 137 130 212 209 170 91 256 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 290</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 68</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 268 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109 175 160 128 210 114 99 41 232 183 49 311 155 166 322 137 130 212 209 170 91 268 171 176 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_rcm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 289</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 294</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 92</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 242 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 176 49 166 183 155 128 109 175 311 99 41 232 171 114 160 210 322 137 130 212 209 170 91 79 242</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_edma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 81</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 292</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 245 268 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 181 184</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 268 49 166 99 183 155 322 41 184 311 109 137 130 212 209 171 181 114 160 210 128 232 175 176 91 79 245 170</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Library\MKV58F24\drivers\fsl_i2c_cmsis.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 44</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 278</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 260 183 114 109 99 128 322 137 49 160 311 41 130 155 210 212 175 171 91 79 170 176 209 232 166 168 172 2 268 181 245 184</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 114 183 109 99 41 232 172 2 181 160 210 128 175 171 168 268 245 49 311 155 166 322 137 130 212 209 176 91 79 260 170 184</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
         </file>
     </configuration>
     <configuration>
